@@ -2996,6 +2996,12 @@ html.gate-on body{padding-right:var(--gate-sb,0px);}
 .gate-bar i{display:block;height:100%;width:100%;background:#14161a;transform:scaleX(0);transform-origin:0 50%;transition:transform .25s ease;}
 .gate-load{margin:8px 0 0;font:500 12px 'JetBrains Mono',monospace;color:#555a62;}
 @media (prefers-reduced-motion:reduce){.gate,.gate-bar i{transition:none;}.gate.is-bad .gate-row{animation:none;}}
+
+/* ================= v17: the paper background («Папір») instead of the grid ================= */
+.bk-people,.bk-marking,.bk-cat,.bk-seo,.bk-footer{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='240'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .08 0 0 0 0 .09 0 0 0 0 .1 0 0 0 1 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url%28%23n%29' opacity='.24'/%3E%3C/svg%3E")!important;background-size:240px 240px!important;}
+.bk-hero .hx::before{background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='240'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .08 0 0 0 0 .09 0 0 0 0 .1 0 0 0 1 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url%28%23n%29' opacity='.24'/%3E%3C/svg%3E") 0 0/240px 240px!important;}
+.gate{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='240'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .08 0 0 0 0 .09 0 0 0 0 .1 0 0 0 1 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url%28%23n%29' opacity='.24'/%3E%3C/svg%3E")!important;background-size:240px 240px!important;}
+.bk-footer .ft::before{display:none!important;}
 </style>
 <script type="application/ld+json">
 {
@@ -3138,10 +3144,10 @@ html.gate-on body{padding-right:var(--gate-sb,0px);}
           <use href="#icon-chevron-down"></use>
         </svg></a>
       <div class="sub">
-        <a href="catalog.html">Всі шини</a>
-        <a href="catalog.html?season=winter">Зимові</a>
-        <a href="catalog.html?season=summer">Літні</a>
-        <a href="catalog.html?season=all">Всесезонні</a>
+        <a href="../catalog/">Всі шини</a>
+        <a href="../catalog/?season=winter">Зимові</a>
+        <a href="../catalog/?season=summer">Літні</a>
+        <a href="../catalog/?season=all">Всесезонні</a>
       </div>
     </div>
     <div class="drawer-item"><a href="#">Про нас</a></div>
@@ -3187,29 +3193,29 @@ html.gate-on body{padding-right:var(--gate-sb,0px);}
         <ul class="main-nav">
           <li><a href="index.html">Головна</a></li>
           <li>
-            <a href="catalog.html">Каталог шин <svg class="icon">
+            <a href="../catalog/">Каталог шин <svg class="icon">
                 <use href="#icon-chevron-down"></use>
               </svg></a>
             <div class="mega">
               <div>
                 <h5>Сезон</h5>
-                <a href="catalog.html?season=winter">Зимові шини</a>
-                <a href="catalog.html?season=summer">Літні шини</a>
-                <a href="catalog.html?season=all">Всесезонні шини</a>
+                <a href="../catalog/?season=winter">Зимові шини</a>
+                <a href="../catalog/?season=summer">Літні шини</a>
+                <a href="../catalog/?season=all">Всесезонні шини</a>
               </div>
               <div>
                 <h5>Діаметр</h5>
-                <a href="catalog.html?r=15">R15</a>
-                <a href="catalog.html?r=16">R16</a>
-                <a href="catalog.html?r=17">R17</a>
-                <a href="catalog.html?r=18">R18</a>
+                <a href="../catalog/?r=15">R15</a>
+                <a href="../catalog/?r=16">R16</a>
+                <a href="../catalog/?r=17">R17</a>
+                <a href="../catalog/?r=18">R18</a>
               </div>
               <div>
                 <h5>Популярні бренди</h5>
-                <a href="catalog.html?brand=michelin">Michelin</a>
-                <a href="catalog.html?brand=continental">Continental</a>
-                <a href="catalog.html?brand=nokian">Nokian</a>
-                <a href="catalog.html?brand=goodyear">Goodyear</a>
+                <a href="../catalog/?brand=michelin">Michelin</a>
+                <a href="../catalog/?brand=continental">Continental</a>
+                <a href="../catalog/?brand=nokian">Nokian</a>
+                <a href="../catalog/?brand=goodyear">Goodyear</a>
               </div>
             </div>
           </li>
@@ -3303,7 +3309,7 @@ html.gate-on body{padding-right:var(--gate-sb,0px);}
                 <use href="#icon-truck"></use>
               </svg><span id="hxCapTitle"></span></div>
             <div class="hx-cap-sub" id="hxCapSub"></div>
-            <a class="btn btn-dark" id="hxCapLink" href="catalog.html"><span id="hxCapCta">Обрати шини</span> <svg
+            <a class="btn btn-dark" id="hxCapLink" href="../catalog/"><span id="hxCapCta">Обрати шини</span> <svg
                 class="icon" style="stroke:#fff">
                 <use href="#icon-chevron-right"></use>
               </svg></a>
@@ -3322,7 +3328,7 @@ html.gate-on body{padding-right:var(--gate-sb,0px);}
               <div><b id="hxInfoM1v">10</b><span id="hxInfoM1l">брендів</span></div>
               <div><b id="hxInfoM2v">від 2 шт</b><span id="hxInfoM2l">у замовленні</span></div>
             </div>
-            <a class="btn btn-dark" id="hxInfoLink" href="catalog.html"><span id="hxInfoCta">Дивитись у каталозі</span>
+            <a class="btn btn-dark" id="hxInfoLink" href="../catalog/"><span id="hxInfoCta">Дивитись у каталозі</span>
               <svg class="icon" style="stroke:#fff">
                 <use href="#icon-chevron-right"></use>
               </svg></a>
@@ -8261,6 +8267,36 @@ document.addEventListener('DOMContentLoaded', function () {
     phone.value = '';
   });
 });
+</script>
+<script>
+/* the paper grain: Chrome draws the SVG noise again for every piece of the page it paints (on a weak video chip most of the cost
+   of anything that moves); here the same SVG is drawn once into a picture of the screen's pixel size and the page uses it —
+   the same pixels, drawn once (made when the page is at rest, again if the zoom changes) */
+(function () {
+  var SVG = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='240'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .08 0 0 0 0 .09 0 0 0 0 .1 0 0 0 1 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url%28%23n%29' opacity='.24'/%3E%3C/svg%3E", blob = '', css = null;
+  function make() {
+    var d = window.devicePixelRatio || 1, n = Math.round(240 * d), svg = new Image();
+    svg.onload = function () {
+      var cv = document.createElement('canvas'); cv.width = cv.height = n; cv.getContext('2d').drawImage(svg, 0, 0, n, n);
+      cv.toBlob(function (b) {
+        if (!b) return;
+        var u = URL.createObjectURL(b), pic = new Image();
+        pic.onload = function () {
+          (pic.decode ? pic.decode().catch(function () {}) : Promise.resolve()).then(function () {
+            if (!css) { css = document.createElement('style'); document.head.appendChild(css); }
+            css.textContent = '.bk-people,.bk-marking,.bk-cat,.bk-seo,.bk-footer,.gate{background-image:url(' + u + ')!important;}.bk-hero .hx::before{background:url(' + u + ') 0 0/240px 240px!important;}';
+            if (blob) URL.revokeObjectURL(blob); blob = u;
+            matchMedia('(resolution: ' + d + 'dppx)').addEventListener('change', make, { once: true });
+          });
+        };
+        pic.src = u;
+      });
+    };
+    svg.src = SVG;
+  }
+  function later() { (window.requestIdleCallback || function (f) { setTimeout(f, 200); })(make, { timeout: 3000 }); }
+  if (document.readyState === 'complete') later(); else addEventListener('load', later);
+})();
 </script>
 </body>
 </html>
