@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="uk">
+<html lang="uk" class="gate-on">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -2787,9 +2787,77 @@ body,.bk-footer{background-color:#f2f1ec!important;background-image:url("data:im
 @media (max-width:640px){ #ctGrid .pc{contain-intrinsic-height:auto 476px;} #ctGrid[data-view="rows"] .pc{contain-intrinsic-height:auto 264px;}
   #expert{contain-intrinsic-height:auto 418px;} #video{contain-intrinsic-height:auto 473px;} #about{contain-intrinsic-height:auto 618px;} #faq{contain-intrinsic-height:auto 701px;}
   .bk-footer{contain-intrinsic-height:auto 1089px;} }
+html.gate-on{scrollbar-width:none;}
+html.gate-on::-webkit-scrollbar{display:none;}
+html.gate-on body{padding-right:var(--gate-sb,0px);}
+/* the entrance: not fully opaque on purpose, a fully covered page would not be drawn */
+.gate{position:fixed;inset:0;z-index:100000;display:grid;place-items:center;padding:24px;background-color:rgba(242,241,236,.998);background-image:linear-gradient(rgba(20,22,26,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(20,22,26,.05) 1px,transparent 1px);background-size:26px 26px;color:#14161a;font-family:'Onest',system-ui,sans-serif;touch-action:none;overscroll-behavior:contain;transition:opacity .35s ease;}
+.gate.is-out{opacity:0;pointer-events:none;}
+.gate-box{width:min(100%,380px);}
+.gate-logo{margin:0 0 6px;font:900 clamp(30px,8vw,40px)/1 'Unbounded',sans-serif;letter-spacing:-.04em;text-transform:uppercase;}
+.gate-logo b{color:#14161a;background:#ccf042;padding:0 .14em;font-weight:900;}
+.gate-note{margin:0 0 22px;font-size:16px;line-height:1.45;color:#555a62;}
+.gate-row{display:flex;gap:8px;}
+.gate input{flex:1;min-width:0;height:52px;padding:0 14px;border:1px solid #14161a;border-radius:0;background:#fbfaf7;color:#14161a;font:500 16px 'Onest',system-ui,sans-serif;}
+.gate input:focus{outline:2px solid #ccf042;outline-offset:-2px;}
+.gate button{flex:none;height:52px;padding:0 18px;border:0;background:linear-gradient(225deg,transparent 8.5px,#ccf042 9px);color:#14161a;font:700 15px 'Onest',system-ui,sans-serif;cursor:pointer;}
+.gate-err{min-height:22px;margin:8px 0 0;font-size:14px;color:#a63a2c;}
+.gate.is-bad .gate-row{animation:gateNo .3s ease;}
+@keyframes gateNo{25%{transform:translateX(-6px);}75%{transform:translateX(6px);}}
+.gate-bar{height:3px;margin-top:6px;background:rgba(20,22,26,.1);overflow:hidden;}
+.gate-bar i{display:block;height:100%;width:100%;background:#14161a;transform:scaleX(0);transform-origin:0 50%;transition:transform .25s ease;}
+.gate-load{margin:8px 0 0;font:500 12px 'JetBrains Mono',monospace;color:#555a62;}
+@media (prefers-reduced-motion:reduce){.gate,.gate-bar i{transition:none;}.gate.is-bad .gate-row{animation:none;}}
+
+.gate{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='240'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .08 0 0 0 0 .09 0 0 0 0 .1 0 0 0 1 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url%28%23n%29' opacity='.24'/%3E%3C/svg%3E");background-size:240px 240px;}
 </style>
 </head>
 <body>
+<script>(function () {
+  var d = document.createElement('div');
+  d.style.cssText = 'position:absolute;width:100px;height:100px;overflow:scroll;visibility:hidden';
+  document.body.appendChild(d);
+  document.documentElement.style.setProperty('--gate-sb', (d.offsetWidth - d.clientWidth) + 'px');
+  d.remove();
+})();</script>
+<div class="gate" id="gate">
+  <div class="gate-box">
+    <p class="gate-logo">Шина <b>buy</b></p>
+    <p class="gate-note">Сторінка на стадії дизайну. Введіть пароль, щоб подивитися.</p>
+    <form class="gate-form" id="gateForm" autocomplete="off">
+      <div class="gate-row"><input id="gatePass" type="password" placeholder="Пароль" aria-label="Пароль"><button type="submit">Увійти</button></div>
+      <p class="gate-err" id="gateErr" role="alert"></p>
+    </form>
+    <div class="gate-bar" aria-hidden="true"><i id="gateBar"></i></div>
+    <p class="gate-load" id="gateLoad">Готуємо сторінку</p>
+  </div>
+</div>
+<script>
+(function () {
+  var HASH = '4ccb6e94', gate = document.getElementById('gate'), form = document.getElementById('gateForm'), pass = document.getElementById('gatePass');
+  var err = document.getElementById('gateErr'), bar = document.getElementById('gateBar'), load = document.getElementById('gateLoad'), ready = false, allowed = false, done = false, rest = [];
+  function fnv(t) { var h = 0x811c9dc5, b = unescape(encodeURIComponent(t)); for (var i = 0; i < b.length; i++) { h ^= b.charCodeAt(i); h = Math.imul(h, 0x01000193) >>> 0; } return ('0000000' + h.toString(16)).slice(-8); }
+  addEventListener('pageshow', function (e) { if (e.persisted) location.reload(); });
+  document.addEventListener('DOMContentLoaded', function () { rest = [].filter.call(document.body.children, function (e) { return e !== gate && e.tagName !== 'SCRIPT'; }); rest.forEach(function (e) { e.inert = true; }); });
+  gate.addEventListener('wheel', function (e) { e.preventDefault(); }, { passive: false });
+  gate.addEventListener('touchmove', function (e) { e.preventDefault(); }, { passive: false });
+  if (matchMedia('(hover: hover)').matches) pass.focus({ preventScroll: true });
+  bar.style.transform = 'scaleX(.3)';
+  function open() {
+    if (done || !allowed || !ready) return; done = true;
+    rest.forEach(function (e) { e.inert = false; });
+    gate.classList.add('is-out');
+    setTimeout(function () { gate.remove(); document.documentElement.classList.remove('gate-on'); }, 400);
+  }
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    if (fnv(pass.value) !== HASH) { err.textContent = 'Неправильний пароль'; gate.classList.remove('is-bad'); void gate.offsetWidth; gate.classList.add('is-bad'); pass.select(); return; }
+    allowed = true; err.textContent = ''; if (!ready) form.hidden = true; open();
+  });
+  function fin() { ready = true; bar.style.transform = 'scaleX(1)'; load.textContent = 'Готово'; open(); }
+  if (document.readyState === 'complete') fin(); else addEventListener('load', fin);
+})();
+</script>
 <svg style="display:none" aria-hidden="true">
     <defs></defs>
     <symbol id="icon-search" viewBox="0 0 24 24">
