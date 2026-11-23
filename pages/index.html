@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="uk" class="gate-on">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Шина buy — сторінки</title>
+<link rel="icon" type="image/png" href="catalog/img/fav-64.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500&family=Onest:wght@400;500;700&family=Unbounded:wght@900&display=swap">
+<style>
+*{box-sizing:border-box;}
+html{background:#f2f1ec;}
+body{margin:0;min-height:100vh;color:#14161a;font:400 16px/1.45 'Onest',system-ui,sans-serif;background:#f2f1ec;background-image:linear-gradient(rgba(20,22,26,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(20,22,26,.05) 1px,transparent 1px);background-size:26px 26px;}
+.wrap{max-width:1120px;margin:0 auto;padding:56px 24px 64px;}
+.logo{margin:0;font:900 clamp(34px,7vw,56px)/1 'Unbounded',sans-serif;letter-spacing:-.04em;text-transform:uppercase;}
+.logo b{background:#ccf042;padding:0 .14em;font-weight:900;}
+.note{margin:14px 0 40px;max-width:560px;font-size:17px;color:#555a62;}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;}
+.pg{position:relative;display:flex;flex-direction:column;min-height:210px;padding:22px 22px 20px;border:1px solid #14161a;background:#fbfaf7;color:inherit;text-decoration:none;transition:background-color .2s ease,transform .2s ease;}
+.pg:hover{background:#ccf042;transform:translateY(-3px);}
+.pg:focus-visible{outline:3px solid #14161a;outline-offset:3px;}
+.pg-n{font:500 13px 'JetBrains Mono',monospace;color:#555a62;}
+.pg-t{margin:18px 0 8px;font:700 23px/1.15 'Onest',sans-serif;letter-spacing:-.01em;}
+.pg-d{flex:1;font-size:15px;color:#3d4148;}
+.pg-v{margin-top:18px;font:500 12px 'JetBrains Mono',monospace;color:#555a62;}
+.pg:hover .pg-n,.pg:hover .pg-v,.pg:hover .pg-d{color:#14161a;}
+.pg-a{position:absolute;right:20px;bottom:18px;width:24px;height:24px;fill:none;stroke:#14161a;stroke-width:2;transition:transform .2s ease;}
+.pg:hover .pg-a{transform:translateX(4px);}
+@media (max-width:900px){.grid{grid-template-columns:repeat(2,1fr);}}
+@media (max-width:600px){.wrap{padding:36px 16px 48px;}.note{margin-bottom:28px;}.grid{grid-template-columns:1fr;gap:12px;}.pg{min-height:0;}}
+@media (prefers-reduced-motion:reduce){.pg,.pg-a{transition:none;}.pg:hover{transform:none;}.pg:hover .pg-a{transform:none;}}
+</style>
+<style>
+html.gate-on{scrollbar-width:none;}
+html.gate-on::-webkit-scrollbar{display:none;}
+html.gate-on body{padding-right:var(--gate-sb,0px);}
+/* the entrance: not fully opaque on purpose, a fully covered page would not be drawn */
+.gate{position:fixed;inset:0;z-index:100000;display:grid;place-items:center;padding:24px;background-color:rgba(242,241,236,.998);background-image:linear-gradient(rgba(20,22,26,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(20,22,26,.05) 1px,transparent 1px);background-size:26px 26px;color:#14161a;font-family:'Onest',system-ui,sans-serif;touch-action:none;overscroll-behavior:contain;transition:opacity .35s ease;}
+.gate.is-out{opacity:0;pointer-events:none;}
+.gate-box{width:min(100%,380px);}
+.gate-logo{margin:0 0 6px;font:900 clamp(30px,8vw,40px)/1 'Unbounded',sans-serif;letter-spacing:-.04em;text-transform:uppercase;}
+.gate-logo b{color:#14161a;background:#ccf042;padding:0 .14em;font-weight:900;}
+.gate-note{margin:0 0 22px;font-size:16px;line-height:1.45;color:#555a62;}
+.gate-row{display:flex;gap:8px;}
+.gate input{flex:1;min-width:0;height:52px;padding:0 14px;border:1px solid #14161a;border-radius:0;background:#fbfaf7;color:#14161a;font:500 16px 'Onest',system-ui,sans-serif;}
+.gate input:focus{outline:2px solid #ccf042;outline-offset:-2px;}
+.gate button{flex:none;height:52px;padding:0 18px;border:0;background:linear-gradient(225deg,transparent 8.5px,#ccf042 9px);color:#14161a;font:700 15px 'Onest',system-ui,sans-serif;cursor:pointer;}
+.gate-err{min-height:22px;margin:8px 0 0;font-size:14px;color:#a63a2c;}
+.gate.is-bad .gate-row{animation:gateNo .3s ease;}
+@keyframes gateNo{25%{transform:translateX(-6px);}75%{transform:translateX(6px);}}
+.gate-bar{height:3px;margin-top:6px;background:rgba(20,22,26,.1);overflow:hidden;}
+.gate-bar i{display:block;height:100%;width:100%;background:#14161a;transform:scaleX(0);transform-origin:0 50%;transition:transform .25s ease;}
+.gate-load{margin:8px 0 0;font:500 12px 'JetBrains Mono',monospace;color:#555a62;}
+@media (prefers-reduced-motion:reduce){.gate,.gate-bar i{transition:none;}.gate.is-bad .gate-row{animation:none;}}
+</style>
+</head>
+<body>
+<script>(function () {
+  var d = document.createElement('div');
+  d.style.cssText = 'position:absolute;width:100px;height:100px;overflow:scroll;visibility:hidden';
+  document.body.appendChild(d);
+  document.documentElement.style.setProperty('--gate-sb', (d.offsetWidth - d.clientWidth) + 'px');
+  d.remove();
+})();</script>
+<div class="gate" id="gate">
+  <div class="gate-box">
+    <p class="gate-logo">Шина <b>buy</b></p>
+    <p class="gate-note">Сторінка на стадії дизайну. Введіть пароль, щоб подивитися.</p>
+    <form class="gate-form" id="gateForm" autocomplete="off">
+      <div class="gate-row"><input id="gatePass" type="password" placeholder="Пароль" aria-label="Пароль"><button type="submit">Увійти</button></div>
+      <p class="gate-err" id="gateErr" role="alert"></p>
+    </form>
+    <div class="gate-bar" aria-hidden="true"><i id="gateBar"></i></div>
+    <p class="gate-load" id="gateLoad">Готуємо сторінку</p>
+  </div>
+</div>
+<script>
+(function () {
+  var HASH = '4ccb6e94', gate = document.getElementById('gate'), form = document.getElementById('gateForm'), pass = document.getElementById('gatePass');
+  var mem = ''; try { mem = localStorage.getItem('shina-gate'); } catch (e) {}
+  if (mem === HASH) { gate.remove(); document.documentElement.classList.remove('gate-on'); return; }
+  var err = document.getElementById('gateErr'), bar = document.getElementById('gateBar'), load = document.getElementById('gateLoad'), ready = false, allowed = false, done = false, rest = [];
+  function fnv(t) { var h = 0x811c9dc5, b = unescape(encodeURIComponent(t)); for (var i = 0; i < b.length; i++) { h ^= b.charCodeAt(i); h = Math.imul(h, 0x01000193) >>> 0; } return ('0000000' + h.toString(16)).slice(-8); }
+  addEventListener('pageshow', function (e) { if (e.persisted && document.getElementById('gate')) location.reload(); });
+  document.addEventListener('DOMContentLoaded', function () { rest = [].filter.call(document.body.children, function (e) { return e !== gate && e.tagName !== 'SCRIPT'; }); rest.forEach(function (e) { e.inert = true; }); });
+  gate.addEventListener('wheel', function (e) { e.preventDefault(); }, { passive: false });
+  gate.addEventListener('touchmove', function (e) { e.preventDefault(); }, { passive: false });
+  if (matchMedia('(hover: hover)').matches) pass.focus({ preventScroll: true });
+  bar.style.transform = 'scaleX(.3)';
+  function open() {
+    if (done || !allowed || !ready) return; done = true;
+    rest.forEach(function (e) { e.inert = false; });
+    gate.classList.add('is-out');
+    setTimeout(function () { gate.remove(); document.documentElement.classList.remove('gate-on'); }, 400);
+  }
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    if (fnv(pass.value) !== HASH) { err.textContent = 'Неправильний пароль'; gate.classList.remove('is-bad'); void gate.offsetWidth; gate.classList.add('is-bad'); pass.select(); return; }
+    try { localStorage.setItem('shina-gate', HASH); } catch (e) {}
+    allowed = true; err.textContent = ''; if (!ready) form.hidden = true; open();
+  });
+  function fin() { ready = true; bar.style.transform = 'scaleX(1)'; load.textContent = 'Готово'; open(); }
+  if (document.readyState === 'complete') fin(); else addEventListener('load', fin);
+})();
+</script>
+<main class="wrap">
+  <h1 class="logo">Шина <b>buy</b></h1>
+  <p class="note">Сторінки сайту в розробці. Дизайн і тексти — чернетка, ціни й відгуки — заглушки.</p>
+  <nav class="grid" aria-label="Сторінки">
+    <a class="pg" href="home/">
+      <span class="pg-n">01</span>
+      <span class="pg-t">Головна</span>
+      <span class="pg-d">Підбір шин за розміром, вибір покупців, як читати маркування, категорії</span>
+      <span class="pg-v">home-v17</span>
+      <svg class="pg-a" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg>
+    </a>
+    <a class="pg" href="catalog/">
+      <span class="pg-n">02</span>
+      <span class="pg-t">Каталог шин</span>
+      <span class="pg-d">Підбір за розміром і за авто, фільтри, картки моделей</span>
+      <span class="pg-v">catalog-v16</span>
+      <svg class="pg-a" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg>
+    </a>
+    <a class="pg" href="product/">
+      <span class="pg-n">03</span>
+      <span class="pg-t">Сторінка товару</span>
+      <span class="pg-d">Continental PremiumContact 7: розміри й ціни, тести, відгуки</span>
+      <span class="pg-v">product-v25</span>
+      <svg class="pg-a" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg>
+    </a>
+    <a class="pg" href="brand/">
+      <span class="pg-n">04</span>
+      <span class="pg-t">Сторінка бренду</span>
+      <span class="pg-d">Continental: історія, тести, відгуки про бренд, моделі</span>
+      <span class="pg-v">brand-v6</span>
+      <svg class="pg-a" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg>
+    </a>
+    <a class="pg" href="checkout/">
+      <span class="pg-n">05</span>
+      <span class="pg-t">Кошик і оформлення</span>
+      <span class="pg-d">Кошик, контакти, доставка й оплата</span>
+      <span class="pg-v">checkout-v10</span>
+      <svg class="pg-a" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg>
+    </a>
+    <a class="pg" href="cabinet/">
+      <span class="pg-n">06</span>
+      <span class="pg-t">Особистий кабінет</span>
+      <span class="pg-d">Відстеження замовлення, гараж, промокоди</span>
+      <span class="pg-v">cabinet-v8</span>
+      <svg class="pg-a" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg>
+    </a>
+  </nav>
+</main>
+</body>
+</html>

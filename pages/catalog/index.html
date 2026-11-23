@@ -4,12 +4,16 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <script>(function () { var v = null, ph = matchMedia('(max-width:640px)').matches, h = document.documentElement; try { v = localStorage.getItem('ct2-view'); } catch (e) {} h.setAttribute('data-ctv', v === 'cards' || v === 'rows' ? v : ph ? 'rows' : 'cards'); h.setAttribute('data-ph', ph ? '1' : '0'); })();</script>
-<title>Каталог шин — каталог v8 — Шина buy</title>
+<title>Каталог шин — каталог v16 — Шина buy</title>
 <meta name="description" content="Каталог шин: оберіть розмір, сезон, бренд. Ціни, наявність, євроетикетка. Доставка Новою поштою.">
 <link rel="icon" type="image/png" href="img/fav-64.png">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <style>
 /* ===== fonts (the same Google Fonts files; one face per family and subset) ===== */
+@font-face{font-family:'Caveat';font-style:normal;font-weight:500 700;font-display:swap;src:url(https://fonts.gstatic.com/s/caveat/v23/Wnz6HAc5bAfYB2Q7azYYmg8.woff2) format('woff2');unicode-range:U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;}
+@font-face{font-family:'Caveat';font-style:normal;font-weight:500 700;font-display:swap;src:url(https://fonts.gstatic.com/s/caveat/v23/Wnz6HAc5bAfYB2Q7YjYYmg8.woff2) format('woff2');unicode-range:U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;}
+@font-face{font-family:'Caveat';font-style:normal;font-weight:500 700;font-display:swap;src:url(https://fonts.gstatic.com/s/caveat/v23/Wnz6HAc5bAfYB2Q7aDYYmg8.woff2) format('woff2');unicode-range:U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;}
+@font-face{font-family:'Caveat';font-style:normal;font-weight:500 700;font-display:swap;src:url(https://fonts.gstatic.com/s/caveat/v23/Wnz6HAc5bAfYB2Q7ZjYY.woff2) format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;}
 @font-face{font-family:'JetBrains Mono';font-style:normal;font-weight:400 800;font-display:swap;src:url(https://fonts.gstatic.com/s/jetbrainsmono/v24/tDbv2o-flEEny0FZhsfKu5WU4zr3E_BX0PnT8RD8yKwBNntkaToggR7BYRbKPx3cwhsk.woff2) format('woff2');unicode-range:U+0460-052F,U+1C80-1C8A,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F}
 @font-face{font-family:'JetBrains Mono';font-style:normal;font-weight:400 800;font-display:swap;src:url(https://fonts.gstatic.com/s/jetbrainsmono/v24/tDbv2o-flEEny0FZhsfKu5WU4zr3E_BX0PnT8RD8yKwBNntkaToggR7BYRbKPxTcwhsk.woff2) format('woff2');unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}
 @font-face{font-family:'JetBrains Mono';font-style:normal;font-weight:400 800;font-display:swap;src:url(https://fonts.gstatic.com/s/jetbrainsmono/v24/tDbv2o-flEEny0FZhsfKu5WU4zr3E_BX0PnT8RD8yKwBNntkaToggR7BYRbKPxPcwhsk.woff2) format('woff2');unicode-range:U+0370-0377,U+037A-037F,U+0384-038A,U+038C,U+038E-03A1,U+03A3-03FF}
@@ -2654,7 +2658,7 @@ body.hxs-open .bk-find{position:relative;z-index:10000;}
 .dial .d-arc{fill:none;stroke-width:8;stroke-dasharray:0 1;}
 .dial .d-knob{transform-box:view-box;transform-origin:70px 70px;transition:transform .12s ease-out;}
 .dial.on .d-knob{transition:none;}
-.dial .d-knob circle{fill:var(--ink);}
+
 .dial .d-knob .d-ring{fill:none;stroke:#3a3d44;stroke-width:2;stroke-dasharray:2 4;}
 .dial .d-ptr{fill:var(--acid);}
 .dial:focus-visible .d-track{stroke:var(--acid);}
@@ -2775,18 +2779,153 @@ body,.bk-footer{background-color:#f2f1ec!important;background-image:url("data:im
 #ctGrid .pc{content-visibility:auto;contain-intrinsic-height:auto 607px;}
 #ctGrid[data-view="rows"] .pc{contain-intrinsic-height:auto 230px;}
 .ct-blk,.bk-footer{content-visibility:auto;}
-#expert{contain-intrinsic-height:auto 256px;} #video{contain-intrinsic-height:auto 431px;} #about{contain-intrinsic-height:auto 288px;} #faq{contain-intrinsic-height:auto 436px;}
+#expert{contain-intrinsic-height:auto 497px;} #video{contain-intrinsic-height:auto 431px;} #about{contain-intrinsic-height:auto 288px;} #faq{contain-intrinsic-height:auto 436px;}
 .bk-footer{contain-intrinsic-height:auto 779px;}
 @media (max-width:1279px){ #ctGrid .pc{contain-intrinsic-height:auto 690px;} #video{contain-intrinsic-height:auto 400px;} .bk-footer{contain-intrinsic-height:auto 742px;} }
 @media (max-width:1100px){ #ctGrid .pc{contain-intrinsic-height:auto 630px;}
-  #expert{contain-intrinsic-height:auto 251px;} #video{contain-intrinsic-height:auto 348px;} #about{contain-intrinsic-height:auto 283px;} #faq{contain-intrinsic-height:auto 431px;} }
+  #expert{contain-intrinsic-height:auto 524px;} #video{contain-intrinsic-height:auto 348px;} #about{contain-intrinsic-height:auto 283px;} #faq{contain-intrinsic-height:auto 431px;} }
 @media (max-width:1000px){ .bk-footer{contain-intrinsic-height:auto 1090px;} }
 @media (max-width:900px){ #ctGrid .pc{contain-intrinsic-height:auto 570px;}
-  #expert{contain-intrinsic-height:auto 271px;} #video{contain-intrinsic-height:auto 600px;} #about{contain-intrinsic-height:auto 479px;} #faq{contain-intrinsic-height:auto 424px;}
+  #expert{contain-intrinsic-height:auto 555px;} #video{contain-intrinsic-height:auto 600px;} #about{contain-intrinsic-height:auto 479px;} #faq{contain-intrinsic-height:auto 424px;}
   .bk-footer{contain-intrinsic-height:auto 1070px;} }
 @media (max-width:640px){ #ctGrid .pc{contain-intrinsic-height:auto 476px;} #ctGrid[data-view="rows"] .pc{contain-intrinsic-height:auto 264px;}
-  #expert{contain-intrinsic-height:auto 418px;} #video{contain-intrinsic-height:auto 473px;} #about{contain-intrinsic-height:auto 618px;} #faq{contain-intrinsic-height:auto 701px;}
+  #expert{contain-intrinsic-height:auto 657px;} #video{contain-intrinsic-height:auto 473px;} #about{contain-intrinsic-height:auto 618px;} #faq{contain-intrinsic-height:auto 701px;}
   .bk-footer{contain-intrinsic-height:auto 1089px;} }
+.xp .price .pf{font:600 14px var(--text);color:var(--ink-2);}
+.xp .ex{grid-area:ex;position:relative;z-index:3;padding:30px 20px 22px 30px;display:flex;flex-direction:column;background:var(--white);transform:translateZ(0);}
+.xp .exq{margin:0;font-size:14.5px;line-height:1.55;color:var(--ink-2);}
+.xp .pm{display:grid;gap:4px;font-size:14.5px;}
+.xp .pm span{display:grid;grid-template-columns:18px 1fr;}
+.xp .pm .p::before{content:"+";font-weight:800;color:var(--good);}
+.xp .pm .m::before{content:"−";font-weight:800;color:var(--bad);}
+.xp .ex::before{content:"";position:absolute;inset:0 0 0 10px;border-radius:10px;transform:rotate(-.5deg);background:url("img/ex-grain.webp") 0 0/220px 220px,linear-gradient(135deg,#775a3e,#573f29 55%,#4a3522);box-shadow:inset 0 1px 0 rgba(255,255,255,.25),inset 0 -2px 3px rgba(0,0,0,.45),0 14px 26px -8px rgba(20,22,26,.6),0 3px 6px rgba(20,22,26,.35);}
+.xp .ex::after{content:"";position:absolute;z-index:3;left:calc(50% + 5px);top:-17px;width:204px;height:65px;margin-left:-102px;transform:rotate(-.5deg);background:url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 64'><defs><linearGradient id='w' x1='0' x2='0' y1='0' y2='1'><stop offset='0' stop-color='%23eceef0'/><stop offset='1' stop-color='%236f7378'/></linearGradient><linearGradient id='b' x1='0' x2='0' y1='0' y2='1'><stop offset='0' stop-color='%23767a7f'/><stop offset='.32' stop-color='%23f8f9fa'/><stop offset='.62' stop-color='%23aeb2b6'/><stop offset='1' stop-color='%235e6267'/></linearGradient><linearGradient id='j' x1='0' x2='0' y1='0' y2='1'><stop offset='0' stop-color='%23c9ccd0'/><stop offset='.1' stop-color='%23eff1f2'/><stop offset='.48' stop-color='%23b4b8bc'/><stop offset='.72' stop-color='%23d9dbde'/><stop offset='.93' stop-color='%23a2a6ab'/><stop offset='1' stop-color='%23777b80'/></linearGradient><linearGradient id='s' x1='0' x2='1' y1='0' y2='.25'><stop offset='.18' stop-color='%23fff' stop-opacity='0'/><stop offset='.32' stop-color='%23fff' stop-opacity='.55'/><stop offset='.44' stop-color='%23fff' stop-opacity='0'/></linearGradient><radialGradient id='r' cx='.38' cy='.32' r='.75'><stop offset='0' stop-color='%23fdfdfe'/><stop offset='.5' stop-color='%23b5b9bd'/><stop offset='1' stop-color='%23565a5f'/></radialGradient></defs><path d='M70 20V13C70 4 78 2.5 86 2.5h28c8 0 16 1.5 16 10.5V20' fill='none' stroke='%23565a5f' stroke-width='5.4'/><path d='M70 20V13C70 4 78 2.5 86 2.5h28c8 0 16 1.5 16 10.5V20' fill='none' stroke='url(%23w)' stroke-width='3.6'/><path d='M32 25Q32 21 37 21H163Q168 21 168 25L179 53Q181 60 173 60H27Q19 60 21 53Z' fill='url(%23j)' stroke='%235e6267' stroke-width='.8'/><path d='M32 25Q32 21 37 21H163Q168 21 168 25L179 53Q181 60 173 60H27Q19 60 21 53Z' fill='url(%23s)'/><path d='M25.5 47.5H174.5' stroke='%2385898e' stroke-width='.9'/><path d='M25 48.6H175' stroke='%23fff' stroke-opacity='.75' stroke-width='.8'/><rect x='38' y='14.5' width='124' height='11' rx='5.5' fill='url(%23b)' stroke='%235e6267' stroke-width='.7'/><circle cx='57' cy='36' r='5.4' fill='url(%23r)' stroke='%234d5156' stroke-width='.8'/><circle cx='143' cy='36' r='5.4' fill='url(%23r)' stroke='%234d5156' stroke-width='.8'/></svg>") center/contain no-repeat;filter:drop-shadow(0 4px 3px rgba(0,0,0,.45));}
+.xp .pfs{--pen:#1b2f6b;position:relative;z-index:1;flex:1;display:flex;flex-direction:column;gap:10px;padding:26px 18px 18px;color:var(--pen);font-family:'Caveat',cursive;background:linear-gradient(#fdfdfa,#faf9f3);box-shadow:0 1px 2px rgba(20,22,26,.3),2px 3px 0 #efeee6,2px 4px 2px rgba(20,22,26,.25),4px 6px 0 #e6e5db,4px 7px 3px rgba(20,22,26,.3);}
+.xp .pfh{font:800 13px/1.3 var(--mono);color:var(--ink);text-transform:uppercase;letter-spacing:.05em;border-bottom:2px solid var(--ink);padding-bottom:6px;}
+.xp .pfl{display:block;font:700 10px/1.5 var(--mono);text-transform:uppercase;letter-spacing:.06em;color:#555a62;}
+.xp .pff{min-width:0;}
+.xp .pfm{font:700 23px/26px 'Caveat',cursive;border-bottom:1px dotted #8b8f96;}
+.xp .pfr{display:grid;grid-template-columns:minmax(0,1fr) 76px;gap:18px;align-items:center;}
+.xp .pfv{margin:0;font:700 25px/30px 'Caveat',cursive;}
+.xp .exface{display:block;width:76px;height:76px;object-fit:cover;border:1px solid var(--ink);}
+.xp .ex .exq{margin:0;color:var(--pen);font-size:22px;line-height:25px;font-weight:500;}
+.xp .ex .pm{gap:0;font-size:22px;line-height:25px;font-weight:500;}
+.xp .ex .pm span{grid-template-columns:22px 1fr;}
+.xp .ex .pm .p::before{font-weight:700;color:#1c7a3f;}
+.xp .ex .pm .m::before{font-weight:700;color:#b5362b;}
+.xp .pfsig{position:relative;margin-top:auto;border-top:1px dotted #8b8f96;padding:4px 84px 0 0;}
+.xp .pfsig b{display:block;font:700 27px/30px 'Caveat',cursive;}
+.xp .pfrole{display:block;font:700 11px/1.2 var(--mono);text-transform:uppercase;letter-spacing:.06em;color:#555a62;}
+.xp .pfsig::after{content:"ШИНА BUY ПЕРЕВІРЕНО";position:absolute;right:0;bottom:-6px;width:76px;height:76px;display:flex;align-items:center;justify-content:center;text-align:center;border:2px solid #b5362b;border-radius:50%;color:#b5362b;font:800 9.5px/1.3 var(--mono);opacity:.72;transform:rotate(-13deg);}
+@media (min-width:981px){.xp .ex{margin:-12px -10px -14px 0;}}
+@media (max-width:980px){.xp .ex{margin-top:-4px;}}
+@media (max-width:640px){.xp .ex{padding:30px 18px 20px 14px;}
+.xp .ex::before{inset:0 6px 0 4px;}
+.xp .ex::after{left:50%;top:-11px;width:168px;height:54px;margin-left:-84px;}
+.xp .pfr{grid-template-columns:minmax(0,1fr) 68px;}
+.xp .exface{width:68px;height:68px;}
+.xp .pfs{padding:26px 16px 16px;}}
+.xp .ex{align-self:start;}
+/* the form in the catalog: alone in its block, not lying on a card */
+.xp{max-width:620px;padding:14px 10px 6px 0;}
+.xp .ex{grid-area:auto;margin:0!important;align-self:auto;background:none;}
+
+
+/* v11: the noise buttons level with the arrows — the text in the middle of the button */
+.eus button.db{display:flex;align-items:center;justify-content:center;gap:2px;padding:0;line-height:1;}
+.eus button.db small{line-height:1;margin:0;position:relative;top:1px;}
+
+/* v11: «Порада експерта» — no clipboard, the hand of the pen only, the full width */
+.xp2{--pen:#1b2f6b;padding:26px 30px 28px;background:var(--white);border:1px solid var(--line);}
+.xp2 .x-l{display:block;margin-bottom:4px;font:700 10.5px/1.5 var(--mono);text-transform:uppercase;letter-spacing:.07em;color:#555a62;}
+.xp2 .x-top{display:grid;grid-template-columns:84px minmax(0,1fr) auto;gap:22px;align-items:center;padding-bottom:20px;border-bottom:1px dotted #8b8f96;}
+.xp2 .x-face{width:84px;height:84px;object-fit:cover;border:1px solid var(--ink);}
+.xp2 .x-ver p{margin:0;font:700 34px/1.1 'Caveat',cursive;color:var(--pen);}
+.xp2 .x-sig{position:relative;padding-right:96px;min-height:84px;display:flex;flex-direction:column;justify-content:center;}
+.xp2 .x-sig b{font:700 30px/1 'Caveat',cursive;color:var(--pen);}
+.xp2 .x-role{margin-top:4px;font:700 11px/1.3 var(--mono);text-transform:uppercase;letter-spacing:.06em;color:#555a62;}
+.xp2 .x-stamp{position:absolute;right:0;top:50%;width:80px;height:80px;margin-top:-40px;display:flex;align-items:center;justify-content:center;text-align:center;border:2px solid #b5362b;border-radius:50%;
+  font:800 10px/1.25 var(--mono);font-style:normal;text-transform:uppercase;color:#b5362b;transform:rotate(-14deg);opacity:.8;}
+.xp2 .x-cols{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);gap:20px 40px;padding-top:18px;}
+.xp2 .x-q{margin:0;font:500 23px/1.3 'Caveat',cursive;color:var(--pen);}
+.xp2 .x-pm{margin:0;padding:0;list-style:none;font:500 23px/1.3 'Caveat',cursive;color:var(--pen);}
+.xp2 .x-pm li{display:grid;grid-template-columns:22px 1fr;}
+.xp2 .x-pm li::before{font-weight:700;}
+.xp2 .x-pm .p::before{content:"+";color:#1c7a3f;} .xp2 .x-pm .m::before{content:"−";color:#b5362b;}
+@media (max-width:900px){
+  .xp2{padding:20px 18px 22px;}
+  .xp2 .x-top{grid-template-columns:64px minmax(0,1fr);gap:14px 16px;}
+  .xp2 .x-face{width:64px;height:64px;}
+  .xp2 .x-ver p{font-size:28px;}
+  .xp2 .x-sig{grid-column:1/-1;min-height:72px;}
+  .xp2 .x-stamp{width:68px;height:68px;margin-top:-34px;font-size:9px;}
+  .xp2 .x-cols{grid-template-columns:minmax(0,1fr);}
+  .xp2 .x-q,.xp2 .x-pm{font-size:21px;}
+}
+
+/* v12: the signature under the advice */
+.xp2 .x-top{grid-template-columns:84px minmax(0,1fr);}
+.xp2 .x-foot{display:flex;justify-content:flex-end;margin-top:20px;padding-top:16px;border-top:1px dotted #8b8f96;}
+.xp2 .x-sig{min-height:80px;}
+@media (max-width:900px){
+  .xp2 .x-top{grid-template-columns:64px minmax(0,1fr);align-items:start;}
+  .xp2 .x-foot{justify-content:flex-start;margin-top:18px;}
+  .xp2 .x-sig{width:100%;min-height:72px;}
+}
+
+/* v13: black text, the points green and red, the signature in pen blue */
+.xp2 .x-ver p,.xp2 .x-q{color:var(--ink);}
+.xp2 .x-pm .p{color:#1c7a3f;}
+.xp2 .x-pm .m{color:#b5362b;}
+
+/* v14: the comment in pen blue */
+.xp2 .x-q{color:var(--pen);}
+
+/* v15: the price knobs of price-filter-v4 */
+
+.dial .led{stroke:#d8d6ce;stroke-width:3.4;stroke-linecap:round;}
+/* the lit LEDs: a layer of their own over the grey ones, one glow for all (it was a filter on each LED); lit by opacity —
+   a fade on a click, a key or the wheel, none while the knob is dragged (the grip turns at once then too) */
+.dial .led-on{stroke-width:3.4;stroke-linecap:round;opacity:0;transition:opacity .12s;}
+.dial .led-on.lit{opacity:1;}
+.dial.on .led-on{transition:none;}
+.dial .hole{fill:rgba(20,22,26,.06);stroke:rgba(20,22,26,.16);stroke-width:1.2;}
+.dial .kb{position:absolute;inset:0;pointer-events:none;}
+.dial .kb > span{position:absolute;border-radius:50%;}
+/* the chrome bezel: brushed metal catching the light */
+.dial .kb-bezel{left:14.3%;top:14.3%;width:71.4%;height:71.4%;
+  background:repeating-radial-gradient(circle at 50% 50%,rgba(255,255,255,.07) 0 .6px,rgba(0,0,0,.05) .6px 1.2px),
+    conic-gradient(from 210deg,#fbfbfc 0deg,#9fa3a9 30deg,#eceef0 62deg,#7c8087 100deg,#d9dbde 142deg,#8b8f95 186deg,#f6f7f8 222deg,#969aa0 266deg,#e3e5e7 302deg,#a6aab0 336deg,#fbfbfc 360deg);
+  box-shadow:0 9px 14px -5px rgba(0,0,0,.6),0 2px 4px rgba(0,0,0,.35),inset 0 1px 1px rgba(255,255,255,.95),inset 0 -1px 2px rgba(0,0,0,.45),inset 0 0 0 1px rgba(0,0,0,.12);}
+/* the rubber grip with fine ribs — it turns */
+.dial .kb-grip{left:19.6%;top:19.6%;width:60.8%;height:60.8%;
+  background:repeating-conic-gradient(from 0deg,#2b2d32 0deg 3deg,#4a4d54 3deg 4deg,#16171a 4deg 7.5deg);
+  box-shadow:0 0 0 1.5px #08090a,inset 0 0 0 1px rgba(255,255,255,.05);transition:transform .12s ease-out;}
+.dial.on .kb-grip{transition:none;}
+.dial .kb-ptr{position:absolute;left:50%;top:3%;width:4px;height:16%;margin-left:-2px;border-radius:2px;background:#e4ff6a;
+  box-shadow:0 0 7px 1px rgba(204,240,66,.9),0 0 2px rgba(204,240,66,1);}
+/* the light from the top left, not turning with the grip */
+.dial .kb-shine{left:19.6%;top:19.6%;width:60.8%;height:60.8%;
+  background:radial-gradient(circle at 30% 20%,rgba(255,255,255,.3),rgba(255,255,255,.06) 38%,transparent 56%),radial-gradient(circle at 72% 86%,rgba(0,0,0,.5),transparent 55%);}
+/* the glossy cap with the price */
+.dial .kb-cap{left:27%;top:27%;width:46%;height:46%;
+  background:radial-gradient(circle at 50% 118%,#3a3d44 0,#141518 55%,#08080a 100%);
+  box-shadow:0 0 0 1.5px #050506,0 4px 9px rgba(0,0,0,.75),inset 0 1px 0 rgba(255,255,255,.22);}
+.dial .kb-cap::before{content:"";position:absolute;left:13%;right:13%;top:5%;height:40%;border-radius:50% 50% 45% 45%/60% 60% 40% 40%;
+  background:linear-gradient(rgba(255,255,255,.24),rgba(255,255,255,0));}
+.dial .d-val{z-index:1;}
+.dial .d-val small{font-size:8.5px;}
+.dial .d-val b{font-size:14.5px;margin:1px 0 0;}
+.dial .d-val i{font-size:8.5px;}
+.dial:focus-visible .kb-bezel{box-shadow:0 0 0 3px var(--acid),0 9px 14px -5px rgba(0,0,0,.6);}
+
+/* ================= v16: «Порада експерта» keeps its new heights while far below ================= */
+@media (max-width:1000px) and (min-width:901px){ #expert{contain-intrinsic-height:auto 550px;} }
+@media (max-width:440px){ #expert{contain-intrinsic-height:auto 700px;} }
+@media (max-width:400px){ #expert{contain-intrinsic-height:auto 770px;} }
+@media (max-width:380px){ #expert{contain-intrinsic-height:auto 834px;} }
+</style>
+<style>
 html.gate-on{scrollbar-width:none;}
 html.gate-on::-webkit-scrollbar{display:none;}
 html.gate-on body{padding-right:var(--gate-sb,0px);}
@@ -2835,9 +2974,11 @@ html.gate-on body{padding-right:var(--gate-sb,0px);}
 <script>
 (function () {
   var HASH = '4ccb6e94', gate = document.getElementById('gate'), form = document.getElementById('gateForm'), pass = document.getElementById('gatePass');
+  var mem = ''; try { mem = localStorage.getItem('shina-gate'); } catch (e) {}
+  if (mem === HASH) { gate.remove(); document.documentElement.classList.remove('gate-on'); return; }
   var err = document.getElementById('gateErr'), bar = document.getElementById('gateBar'), load = document.getElementById('gateLoad'), ready = false, allowed = false, done = false, rest = [];
   function fnv(t) { var h = 0x811c9dc5, b = unescape(encodeURIComponent(t)); for (var i = 0; i < b.length; i++) { h ^= b.charCodeAt(i); h = Math.imul(h, 0x01000193) >>> 0; } return ('0000000' + h.toString(16)).slice(-8); }
-  addEventListener('pageshow', function (e) { if (e.persisted) location.reload(); });
+  addEventListener('pageshow', function (e) { if (e.persisted && document.getElementById('gate')) location.reload(); });
   document.addEventListener('DOMContentLoaded', function () { rest = [].filter.call(document.body.children, function (e) { return e !== gate && e.tagName !== 'SCRIPT'; }); rest.forEach(function (e) { e.inert = true; }); });
   gate.addEventListener('wheel', function (e) { e.preventDefault(); }, { passive: false });
   gate.addEventListener('touchmove', function (e) { e.preventDefault(); }, { passive: false });
@@ -2852,6 +2993,7 @@ html.gate-on body{padding-right:var(--gate-sb,0px);}
   form.addEventListener('submit', function (e) {
     e.preventDefault();
     if (fnv(pass.value) !== HASH) { err.textContent = 'Неправильний пароль'; gate.classList.remove('is-bad'); void gate.offsetWidth; gate.classList.add('is-bad'); pass.select(); return; }
+    try { localStorage.setItem('shina-gate', HASH); } catch (e) {}
     allowed = true; err.textContent = ''; if (!ready) form.hidden = true; open();
   });
   function fin() { ready = true; bar.style.transform = 'scaleX(1)'; load.textContent = 'Готово'; open(); }
@@ -3084,7 +3226,7 @@ html.gate-on body{padding-right:var(--gate-sb,0px);}
 <div class="bk-find" id="ctFind"><section class="hx is-ready" id="hx" aria-label="Підбір шин">
       <!-- пошук — один рядок на всю ширину -->
       <div class="hx-finder-wrap">
-        <div class="hxs-bar"><div class="hxs-sum" id="hxsSum"></div><button type="button" class="btn btn-primary" id="hxsOpen">Підібрати шини</button></div>
+        <div class="hxs-bar"><div class="hxs-sum" id="hxsSum">195/65 R15<small>Зима · натисніть, щоб змінити</small></div><button type="button" class="btn btn-primary" id="hxsOpen">Підібрати шини</button></div>
         <button type="button" class="hxs-close" id="hxsClose" aria-label="Закрити">×</button>
         <div class="hx-card finder">
           <div class="hx-bg" id="hxBg" aria-hidden="true"><canvas class="hx-weather"></canvas></div>
@@ -3202,7 +3344,7 @@ html.gate-on body{padding-right:var(--gate-sb,0px);}
 
                 <div class="hx-tire"><canvas id="hxTire" aria-hidden="true"></canvas><div class="hx-tire-cap" id="hxTireCap"></div><button type="button" class="hx-what" id="hxWhat" aria-label="Де знайти розмір?" aria-haspopup="dialog"><svg viewBox="0 .3 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M8.8 9.2a3.2 3.2 0 1 1 5 2.65c-1.1.75-1.8 1.45-1.8 2.75"/><circle cx="12" cy="18" r=".6" fill="currentColor"/></svg></button><a class="hx-read" href="../home/#marking">Читати маркування шини</a></div></div>
                 <div class="hx-season-wrap">
-                  <div class="hx-quick" id="hxQuick"></div>
+                  <div class="hx-quick" id="hxQuick"><button type="button" class="hx-qbtn" aria-expanded="false">Популярні розміри<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></button><div class="hx-qlist" hidden></div></div>
                   <div class="hx-title">Сезон</div>
                   <div class="hx-seasons" id="hxSeasons">
                     <button class="hx-chip" data-s="winter"><svg class="icon">
@@ -3262,12 +3404,12 @@ html.gate-on body{padding-right:var(--gate-sb,0px);}
             <div class="fgc"><div class="fg-b"><div class="tiles c3" id="fSeason"><button type="button" class="tl sea" data-g="season" data-k="s" aria-pressed="false"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"></circle><path d="M12 2.5v2M12 19.5v2M4.6 4.6 6 6M18 18l1.4 1.4M2.5 12h2M19.5 12h2M4.6 19.4 6 18M18 6l1.4-1.4"></path></svg>Літні<span class="c">11</span></button><button type="button" class="tl sea" data-g="season" data-k="w" aria-pressed="false"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5v19M3.8 7.2l16.4 9.6M3.8 16.8l16.4-9.6"></path><path d="M9.5 4 12 5.8 14.5 4M9.5 20 12 18.2 14.5 20"></path></svg>Зимові<span class="c">5</span></button><button type="button" class="tl sea" data-g="season" data-k="a" aria-pressed="false"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><circle cx="8" cy="8" r="3"></circle><path d="M8 2.5v1.4M8 12.1v1.4M2.5 8h1.4M12.1 8h1.4M4.1 4.1l1 1M10.9 10.9l1 1M4.1 11.9l1-1M10.9 5.1l1-1"></path><path d="M17 11v10.5M12.6 13.6l8.8 5.3M12.6 18.9l8.8-5.3"></path></svg>Всесезонні<span class="c">6</span></button></div></div></div></div>
           <div class="fg" data-fg="price"><button type="button" class="fg-h" aria-expanded="true"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M3.5 12.5V4h8.5l9 9-8.5 8.5z"></path><circle cx="8" cy="8.5" r="1.4"></circle></svg><b>Ціна за шт</b><em></em><svg class="i chev" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"></path></svg></button>
             <div class="fgc"><div class="fg-b">
-              <div class="dials"><div class="dial" id="dA" role="slider" tabindex="0" aria-label="Ціна від" aria-valuemin="1600" aria-valuemax="5800" aria-valuenow="1600" aria-valuetext="1&nbsp;600 гривень"><svg viewBox="0 0 140 140" aria-hidden="true"><defs><linearGradient id="gA" x1="0" y1="1" x2="1" y2="1"><stop offset="0" stop-color="#1a9641"></stop><stop offset=".55" stop-color="#ccf042"></stop><stop offset="1" stop-color="#f39200"></stop></linearGradient></defs><path d="M26.9 113.1 L22.6 117.4" class="tk big"></path><path d="M18.4 106.1 L15.1 108.4" class="tk"></path><path d="M12.9 96.6 L9.3 98.3" class="tk"></path><path d="M9.1 86.3 L5.3 87.3" class="tk"></path><path d="M7.2 75.5 L3.3 75.8" class="tk"></path><path d="M7.2 64.5 L3.3 64.2" class="tk"></path><path d="M9.1 53.7 L5.3 52.7" class="tk"></path><path d="M12.9 43.4 L9.3 41.7" class="tk"></path><path d="M18.4 33.9 L15.1 31.6" class="tk"></path><path d="M26.9 26.9 L22.6 22.6" class="tk big"></path><path d="M33.9 18.4 L31.6 15.1" class="tk"></path><path d="M43.4 12.9 L41.7 9.3" class="tk"></path><path d="M53.7 9.1 L52.7 5.3" class="tk"></path><path d="M64.5 7.2 L64.2 3.3" class="tk"></path><path d="M75.5 7.2 L75.8 3.3" class="tk"></path><path d="M86.3 9.1 L87.3 5.3" class="tk"></path><path d="M96.6 12.9 L98.3 9.3" class="tk"></path><path d="M106.1 18.4 L108.4 15.1" class="tk"></path><path d="M113.1 26.9 L117.4 22.6" class="tk big"></path><path d="M121.6 33.9 L124.9 31.6" class="tk"></path><path d="M127.1 43.4 L130.7 41.7" class="tk"></path><path d="M130.9 53.7 L134.7 52.7" class="tk"></path><path d="M132.8 64.5 L136.7 64.2" class="tk"></path><path d="M132.8 75.5 L136.7 75.8" class="tk"></path><path d="M130.9 86.3 L134.7 87.3" class="tk"></path><path d="M127.1 96.6 L130.7 98.3" class="tk"></path><path d="M121.6 106.1 L124.9 108.4" class="tk"></path><path d="M113.1 113.1 L117.4 117.4" class="tk big"></path><path class="d-track" d="M31.8 108.2 A54 54 0 1 1 108.2 108.2" pathLength="1"></path><path class="d-arc" d="M31.8 108.2 A54 54 0 1 1 108.2 108.2" pathLength="1" stroke="url(#gA)" style="stroke-dasharray: 0.001, 1;"></path><g class="d-knob" style="transform: rotate(-135deg);"><circle cx="70" cy="70" r="41"></circle><circle class="d-ring" cx="70" cy="70" r="35"></circle><rect class="d-ptr" x="67.5" y="31" width="5" height="15"></rect></g></svg><div class="d-val"><small>від</small><b>1&nbsp;600</b><i>₴/шт</i></div></div><div class="dial" id="dB" role="slider" tabindex="0" aria-label="Ціна до" aria-valuemin="1600" aria-valuemax="5800" aria-valuenow="5800" aria-valuetext="5&nbsp;800 гривень"><svg viewBox="0 0 140 140" aria-hidden="true"><defs><linearGradient id="gB" x1="0" y1="1" x2="1" y2="1"><stop offset="0" stop-color="#1a9641"></stop><stop offset=".55" stop-color="#ccf042"></stop><stop offset="1" stop-color="#f39200"></stop></linearGradient></defs><path d="M26.9 113.1 L22.6 117.4" class="tk big"></path><path d="M18.4 106.1 L15.1 108.4" class="tk"></path><path d="M12.9 96.6 L9.3 98.3" class="tk"></path><path d="M9.1 86.3 L5.3 87.3" class="tk"></path><path d="M7.2 75.5 L3.3 75.8" class="tk"></path><path d="M7.2 64.5 L3.3 64.2" class="tk"></path><path d="M9.1 53.7 L5.3 52.7" class="tk"></path><path d="M12.9 43.4 L9.3 41.7" class="tk"></path><path d="M18.4 33.9 L15.1 31.6" class="tk"></path><path d="M26.9 26.9 L22.6 22.6" class="tk big"></path><path d="M33.9 18.4 L31.6 15.1" class="tk"></path><path d="M43.4 12.9 L41.7 9.3" class="tk"></path><path d="M53.7 9.1 L52.7 5.3" class="tk"></path><path d="M64.5 7.2 L64.2 3.3" class="tk"></path><path d="M75.5 7.2 L75.8 3.3" class="tk"></path><path d="M86.3 9.1 L87.3 5.3" class="tk"></path><path d="M96.6 12.9 L98.3 9.3" class="tk"></path><path d="M106.1 18.4 L108.4 15.1" class="tk"></path><path d="M113.1 26.9 L117.4 22.6" class="tk big"></path><path d="M121.6 33.9 L124.9 31.6" class="tk"></path><path d="M127.1 43.4 L130.7 41.7" class="tk"></path><path d="M130.9 53.7 L134.7 52.7" class="tk"></path><path d="M132.8 64.5 L136.7 64.2" class="tk"></path><path d="M132.8 75.5 L136.7 75.8" class="tk"></path><path d="M130.9 86.3 L134.7 87.3" class="tk"></path><path d="M127.1 96.6 L130.7 98.3" class="tk"></path><path d="M121.6 106.1 L124.9 108.4" class="tk"></path><path d="M113.1 113.1 L117.4 117.4" class="tk big"></path><path class="d-track" d="M31.8 108.2 A54 54 0 1 1 108.2 108.2" pathLength="1"></path><path class="d-arc" d="M31.8 108.2 A54 54 0 1 1 108.2 108.2" pathLength="1" stroke="url(#gB)" style="stroke-dasharray: 1, 1;"></path><g class="d-knob" style="transform: rotate(135deg);"><circle cx="70" cy="70" r="41"></circle><circle class="d-ring" cx="70" cy="70" r="35"></circle><rect class="d-ptr" x="67.5" y="31" width="5" height="15"></rect></g></svg><div class="d-val"><small>до</small><b>5&nbsp;800</b><i>₴/шт</i></div></div></div>
+              <div class="dials"><div class="dial" id="dA" role="slider" tabindex="0" aria-label="Ціна від" aria-valuemin="1600" aria-valuemax="5800" aria-valuenow="1600" aria-valuetext="1&nbsp;600 гривень"><svg viewBox="0 0 140 140" aria-hidden="true"><defs><filter id="lgA" color-interpolation-filters="sRGB"><feGaussianBlur stdDeviation="1.15" result="g"/><feMerge><feMergeNode in="g"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs><path d="M25.5 114.5 L21.9 118.1" class="tk big"/><path d="M17.2 107.0 L14.3 109.0" class="tk"/><path d="M11.5 97.3 L8.4 98.7" class="tk"/><path d="M7.7 86.7 L4.3 87.6" class="tk"/><path d="M5.7 75.6 L2.3 75.9" class="tk"/><path d="M5.7 64.4 L2.3 64.1" class="tk"/><path d="M7.7 53.3 L4.3 52.4" class="tk"/><path d="M11.5 42.7 L8.4 41.3" class="tk"/><path d="M17.2 33.0 L14.3 31.0" class="tk"/><path d="M25.5 25.5 L21.9 21.9" class="tk big"/><path d="M33.0 17.2 L31.0 14.3" class="tk"/><path d="M42.7 11.5 L41.3 8.4" class="tk"/><path d="M53.3 7.7 L52.4 4.3" class="tk"/><path d="M64.4 5.7 L64.1 2.3" class="tk"/><path d="M75.6 5.7 L75.9 2.3" class="tk"/><path d="M86.7 7.7 L87.6 4.3" class="tk"/><path d="M97.3 11.5 L98.7 8.4" class="tk"/><path d="M107.0 17.2 L109.0 14.3" class="tk"/><path d="M114.5 25.5 L118.1 21.9" class="tk big"/><path d="M122.8 33.0 L125.7 31.0" class="tk"/><path d="M128.5 42.7 L131.6 41.3" class="tk"/><path d="M132.3 53.3 L135.7 52.4" class="tk"/><path d="M134.3 64.4 L137.7 64.1" class="tk"/><path d="M134.3 75.6 L137.7 75.9" class="tk"/><path d="M132.3 86.7 L135.7 87.6" class="tk"/><path d="M128.5 97.3 L131.6 98.7" class="tk"/><path d="M122.8 107.0 L125.7 109.0" class="tk"/><path d="M114.5 114.5 L118.1 118.1" class="tk big"/><g class="leds"><line class="led" x1="31.82" y1="108.18" x2="27.93" y2="112.07"/><line class="led" x1="25.10" y1="100.00" x2="20.53" y2="103.06"/><line class="led" x1="20.11" y1="90.66" x2="15.03" y2="92.77"/><line class="led" x1="17.04" y1="80.53" x2="11.64" y2="81.61"/><line class="led" x1="16.00" y1="70.00" x2="10.50" y2="70.00"/><line class="led" x1="17.04" y1="59.47" x2="11.64" y2="58.39"/><line class="led" x1="20.11" y1="49.34" x2="15.03" y2="47.23"/><line class="led" x1="25.10" y1="40.00" x2="20.53" y2="36.94"/><line class="led" x1="31.82" y1="31.82" x2="27.93" y2="27.93"/><line class="led" x1="40.00" y1="25.10" x2="36.94" y2="20.53"/><line class="led" x1="49.34" y1="20.11" x2="47.23" y2="15.03"/><line class="led" x1="59.47" y1="17.04" x2="58.39" y2="11.64"/><line class="led" x1="70.00" y1="16.00" x2="70.00" y2="10.50"/><line class="led" x1="80.53" y1="17.04" x2="81.61" y2="11.64"/><line class="led" x1="90.66" y1="20.11" x2="92.77" y2="15.03"/><line class="led" x1="100.00" y1="25.10" x2="103.06" y2="20.53"/><line class="led" x1="108.18" y1="31.82" x2="112.07" y2="27.93"/><line class="led" x1="114.90" y1="40.00" x2="119.47" y2="36.94"/><line class="led" x1="119.89" y1="49.34" x2="124.97" y2="47.23"/><line class="led" x1="122.96" y1="59.47" x2="128.36" y2="58.39"/><line class="led" x1="124.00" y1="70.00" x2="129.50" y2="70.00"/><line class="led" x1="122.96" y1="80.53" x2="128.36" y2="81.61"/><line class="led" x1="119.89" y1="90.66" x2="124.97" y2="92.77"/><line class="led" x1="114.90" y1="100.00" x2="119.47" y2="103.06"/><line class="led" x1="108.18" y1="108.18" x2="112.07" y2="112.07"/></g><g class="leds-on" filter="url(#lgA)"><line class="led-on lit" x1="31.82" y1="108.18" x2="27.93" y2="112.07" stroke="rgb(26,150,65)"/><line class="led-on" x1="25.10" y1="100.00" x2="20.53" y2="103.06" stroke="rgb(39,157,65)"/><line class="led-on" x1="20.11" y1="90.66" x2="15.03" y2="92.77" stroke="rgb(53,164,65)"/><line class="led-on" x1="17.04" y1="80.53" x2="11.64" y2="81.61" stroke="rgb(66,170,65)"/><line class="led-on" x1="16.00" y1="70.00" x2="10.50" y2="70.00" stroke="rgb(80,177,65)"/><line class="led-on" x1="17.04" y1="59.47" x2="11.64" y2="58.39" stroke="rgb(93,184,65)"/><line class="led-on" x1="20.11" y1="49.34" x2="15.03" y2="47.23" stroke="rgb(107,191,65)"/><line class="led-on" x1="25.10" y1="40.00" x2="20.53" y2="36.94" stroke="rgb(120,198,66)"/><line class="led-on" x1="31.82" y1="31.82" x2="27.93" y2="27.93" stroke="rgb(134,205,66)"/><line class="led-on" x1="40.00" y1="25.10" x2="36.94" y2="20.53" stroke="rgb(147,211,66)"/><line class="led-on" x1="49.34" y1="20.11" x2="47.23" y2="15.03" stroke="rgb(161,218,66)"/><line class="led-on" x1="59.47" y1="17.04" x2="58.39" y2="11.64" stroke="rgb(174,225,66)"/><line class="led-on" x1="70.00" y1="16.00" x2="70.00" y2="10.50" stroke="rgb(188,232,66)"/><line class="led-on" x1="80.53" y1="17.04" x2="81.61" y2="11.64" stroke="rgb(201,239,66)"/><line class="led-on" x1="90.66" y1="20.11" x2="92.77" y2="15.03" stroke="rgb(207,233,61)"/><line class="led-on" x1="100.00" y1="25.10" x2="103.06" y2="20.53" stroke="rgb(211,224,55)"/><line class="led-on" x1="108.18" y1="31.82" x2="112.07" y2="27.93" stroke="rgb(214,216,49)"/><line class="led-on" x1="114.90" y1="40.00" x2="119.47" y2="36.94" stroke="rgb(218,207,43)"/><line class="led-on" x1="119.89" y1="49.34" x2="124.97" y2="47.23" stroke="rgb(221,198,37)"/><line class="led-on" x1="122.96" y1="59.47" x2="128.36" y2="58.39" stroke="rgb(225,190,31)"/><line class="led-on" x1="124.00" y1="70.00" x2="129.50" y2="70.00" stroke="rgb(229,181,24)"/><line class="led-on" x1="122.96" y1="80.53" x2="128.36" y2="81.61" stroke="rgb(232,172,18)"/><line class="led-on" x1="119.89" y1="90.66" x2="124.97" y2="92.77" stroke="rgb(236,163,12)"/><line class="led-on" x1="114.90" y1="100.00" x2="119.47" y2="103.06" stroke="rgb(239,155,6)"/><line class="led-on" x1="108.18" y1="108.18" x2="112.07" y2="112.07" stroke="rgb(243,146,0)"/></g><circle class="hole" cx="70" cy="70" r="51"/></svg><span class="kb" aria-hidden="true"><span class="kb-bezel"></span><span class="kb-grip"><i class="kb-ptr"></i></span><span class="kb-shine"></span><span class="kb-cap"></span></span><div class="d-val"><small>від</small><b>1&nbsp;600</b><i>₴/шт</i></div></div><div class="dial" id="dB" role="slider" tabindex="0" aria-label="Ціна до" aria-valuemin="1600" aria-valuemax="5800" aria-valuenow="5800" aria-valuetext="5&nbsp;800 гривень"><svg viewBox="0 0 140 140" aria-hidden="true"><defs><filter id="lgB" color-interpolation-filters="sRGB"><feGaussianBlur stdDeviation="1.15" result="g"/><feMerge><feMergeNode in="g"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs><path d="M25.5 114.5 L21.9 118.1" class="tk big"/><path d="M17.2 107.0 L14.3 109.0" class="tk"/><path d="M11.5 97.3 L8.4 98.7" class="tk"/><path d="M7.7 86.7 L4.3 87.6" class="tk"/><path d="M5.7 75.6 L2.3 75.9" class="tk"/><path d="M5.7 64.4 L2.3 64.1" class="tk"/><path d="M7.7 53.3 L4.3 52.4" class="tk"/><path d="M11.5 42.7 L8.4 41.3" class="tk"/><path d="M17.2 33.0 L14.3 31.0" class="tk"/><path d="M25.5 25.5 L21.9 21.9" class="tk big"/><path d="M33.0 17.2 L31.0 14.3" class="tk"/><path d="M42.7 11.5 L41.3 8.4" class="tk"/><path d="M53.3 7.7 L52.4 4.3" class="tk"/><path d="M64.4 5.7 L64.1 2.3" class="tk"/><path d="M75.6 5.7 L75.9 2.3" class="tk"/><path d="M86.7 7.7 L87.6 4.3" class="tk"/><path d="M97.3 11.5 L98.7 8.4" class="tk"/><path d="M107.0 17.2 L109.0 14.3" class="tk"/><path d="M114.5 25.5 L118.1 21.9" class="tk big"/><path d="M122.8 33.0 L125.7 31.0" class="tk"/><path d="M128.5 42.7 L131.6 41.3" class="tk"/><path d="M132.3 53.3 L135.7 52.4" class="tk"/><path d="M134.3 64.4 L137.7 64.1" class="tk"/><path d="M134.3 75.6 L137.7 75.9" class="tk"/><path d="M132.3 86.7 L135.7 87.6" class="tk"/><path d="M128.5 97.3 L131.6 98.7" class="tk"/><path d="M122.8 107.0 L125.7 109.0" class="tk"/><path d="M114.5 114.5 L118.1 118.1" class="tk big"/><g class="leds"><line class="led" x1="31.82" y1="108.18" x2="27.93" y2="112.07"/><line class="led" x1="25.10" y1="100.00" x2="20.53" y2="103.06"/><line class="led" x1="20.11" y1="90.66" x2="15.03" y2="92.77"/><line class="led" x1="17.04" y1="80.53" x2="11.64" y2="81.61"/><line class="led" x1="16.00" y1="70.00" x2="10.50" y2="70.00"/><line class="led" x1="17.04" y1="59.47" x2="11.64" y2="58.39"/><line class="led" x1="20.11" y1="49.34" x2="15.03" y2="47.23"/><line class="led" x1="25.10" y1="40.00" x2="20.53" y2="36.94"/><line class="led" x1="31.82" y1="31.82" x2="27.93" y2="27.93"/><line class="led" x1="40.00" y1="25.10" x2="36.94" y2="20.53"/><line class="led" x1="49.34" y1="20.11" x2="47.23" y2="15.03"/><line class="led" x1="59.47" y1="17.04" x2="58.39" y2="11.64"/><line class="led" x1="70.00" y1="16.00" x2="70.00" y2="10.50"/><line class="led" x1="80.53" y1="17.04" x2="81.61" y2="11.64"/><line class="led" x1="90.66" y1="20.11" x2="92.77" y2="15.03"/><line class="led" x1="100.00" y1="25.10" x2="103.06" y2="20.53"/><line class="led" x1="108.18" y1="31.82" x2="112.07" y2="27.93"/><line class="led" x1="114.90" y1="40.00" x2="119.47" y2="36.94"/><line class="led" x1="119.89" y1="49.34" x2="124.97" y2="47.23"/><line class="led" x1="122.96" y1="59.47" x2="128.36" y2="58.39"/><line class="led" x1="124.00" y1="70.00" x2="129.50" y2="70.00"/><line class="led" x1="122.96" y1="80.53" x2="128.36" y2="81.61"/><line class="led" x1="119.89" y1="90.66" x2="124.97" y2="92.77"/><line class="led" x1="114.90" y1="100.00" x2="119.47" y2="103.06"/><line class="led" x1="108.18" y1="108.18" x2="112.07" y2="112.07"/></g><g class="leds-on" filter="url(#lgB)"><line class="led-on lit" x1="31.82" y1="108.18" x2="27.93" y2="112.07" stroke="rgb(26,150,65)"/><line class="led-on lit" x1="25.10" y1="100.00" x2="20.53" y2="103.06" stroke="rgb(39,157,65)"/><line class="led-on lit" x1="20.11" y1="90.66" x2="15.03" y2="92.77" stroke="rgb(53,164,65)"/><line class="led-on lit" x1="17.04" y1="80.53" x2="11.64" y2="81.61" stroke="rgb(66,170,65)"/><line class="led-on lit" x1="16.00" y1="70.00" x2="10.50" y2="70.00" stroke="rgb(80,177,65)"/><line class="led-on lit" x1="17.04" y1="59.47" x2="11.64" y2="58.39" stroke="rgb(93,184,65)"/><line class="led-on lit" x1="20.11" y1="49.34" x2="15.03" y2="47.23" stroke="rgb(107,191,65)"/><line class="led-on lit" x1="25.10" y1="40.00" x2="20.53" y2="36.94" stroke="rgb(120,198,66)"/><line class="led-on lit" x1="31.82" y1="31.82" x2="27.93" y2="27.93" stroke="rgb(134,205,66)"/><line class="led-on lit" x1="40.00" y1="25.10" x2="36.94" y2="20.53" stroke="rgb(147,211,66)"/><line class="led-on lit" x1="49.34" y1="20.11" x2="47.23" y2="15.03" stroke="rgb(161,218,66)"/><line class="led-on lit" x1="59.47" y1="17.04" x2="58.39" y2="11.64" stroke="rgb(174,225,66)"/><line class="led-on lit" x1="70.00" y1="16.00" x2="70.00" y2="10.50" stroke="rgb(188,232,66)"/><line class="led-on lit" x1="80.53" y1="17.04" x2="81.61" y2="11.64" stroke="rgb(201,239,66)"/><line class="led-on lit" x1="90.66" y1="20.11" x2="92.77" y2="15.03" stroke="rgb(207,233,61)"/><line class="led-on lit" x1="100.00" y1="25.10" x2="103.06" y2="20.53" stroke="rgb(211,224,55)"/><line class="led-on lit" x1="108.18" y1="31.82" x2="112.07" y2="27.93" stroke="rgb(214,216,49)"/><line class="led-on lit" x1="114.90" y1="40.00" x2="119.47" y2="36.94" stroke="rgb(218,207,43)"/><line class="led-on lit" x1="119.89" y1="49.34" x2="124.97" y2="47.23" stroke="rgb(221,198,37)"/><line class="led-on lit" x1="122.96" y1="59.47" x2="128.36" y2="58.39" stroke="rgb(225,190,31)"/><line class="led-on lit" x1="124.00" y1="70.00" x2="129.50" y2="70.00" stroke="rgb(229,181,24)"/><line class="led-on lit" x1="122.96" y1="80.53" x2="128.36" y2="81.61" stroke="rgb(232,172,18)"/><line class="led-on lit" x1="119.89" y1="90.66" x2="124.97" y2="92.77" stroke="rgb(236,163,12)"/><line class="led-on lit" x1="114.90" y1="100.00" x2="119.47" y2="103.06" stroke="rgb(239,155,6)"/><line class="led-on lit" x1="108.18" y1="108.18" x2="112.07" y2="112.07" stroke="rgb(243,146,0)"/></g><circle class="hole" cx="70" cy="70" r="51"/></svg><span class="kb" aria-hidden="true"><span class="kb-bezel"></span><span class="kb-grip"><i class="kb-ptr"></i></span><span class="kb-shine"></span><span class="kb-cap"></span></span><div class="d-val"><small>до</small><b>5&nbsp;800</b><i>₴/шт</i></div></div></div>
               <p class="fg-hint dials-hint">Крутіть ручки — пальцем, мишею або колесом</p>
               <div class="pr-pre" id="fPre"><button type="button" data-pre="0" aria-pressed="false">до 2 500</button><button type="button" data-pre="1" aria-pressed="false">2 500–3 500</button><button type="button" data-pre="2" aria-pressed="false">від 3 500</button></div>
             </div></div></div>
           <div class="fg" data-fg="brand"><button type="button" class="fg-h" aria-expanded="true"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3.5l2.6 5.3 5.8.8-4.2 4.1 1 5.8L12 16.8l-5.2 2.7 1-5.8-4.2-4.1 5.8-.8z"></path></svg><b>Бренд</b><em></em><svg class="i chev" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"></path></svg></button>
-            <div class="fgc"><div class="fg-b"><label class="br-q"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6.5"></circle><path d="M16 16l4.5 4.5"></path></svg><input type="search" id="brQ" placeholder="Знайти бренд" aria-label="Знайти бренд"></label><div class="brs" id="fBrand"><button type="button" class="tl br" data-name="vredestein" title="Vredestein" data-g="brand" data-k="quatrac" aria-pressed="false"><img src="img/brands-s/vredestein.webp" alt="Vredestein" loading="lazy"><span class="c">6</span></button><button type="button" class="tl br" data-name="barum" title="Barum" data-g="brand" data-k="polaris5" aria-pressed="false"><img src="img/brands-s/barum.svg" alt="Barum" loading="lazy"><span class="c">5</span></button><button type="button" class="tl br" data-name="continental" title="Continental" data-g="brand" data-k="pc7" aria-pressed="false"><img src="img/brands-s/continental.svg" alt="Continental" loading="lazy"><span class="c">4</span></button><button type="button" class="tl br" data-name="lassa" title="Lassa" data-g="brand" data-k="revola" aria-pressed="false"><img src="img/brands-s/lassa.webp" alt="Lassa" loading="lazy"><span class="c">4</span></button><button type="button" class="tl br" data-name="toyo" title="Toyo" data-g="brand" data-k="proxes2" aria-pressed="false"><img src="img/brands-s/toyo.svg" alt="Toyo" loading="lazy"><span class="c">3</span></button><button type="button" class="tl br zero" data-name="federal" title="Federal" data-g="brand" data-k="federal" aria-pressed="false"><img src="img/brands-s/federal.webp" alt="Federal" loading="lazy"><span class="c">0</span></button><button type="button" class="tl br zero" data-name="nitto" title="Nitto" data-g="brand" data-k="nitto" aria-pressed="false" hidden=""><img src="img/brands-s/nitto.webp" alt="Nitto" loading="lazy"><span class="c">0</span></button><button type="button" class="tl br zero" data-name="orium" title="Orium" data-g="brand" data-k="orium" aria-pressed="false" hidden=""><img src="img/brands-s/orium.webp" alt="Orium" loading="lazy"><span class="c">0</span></button><button type="button" class="tl br zero" data-name="riken" title="Riken" data-g="brand" data-k="riken" aria-pressed="false" hidden=""><img src="img/brands-s/riken.webp" alt="Riken" loading="lazy"><span class="c">0</span></button><button type="button" class="tl br zero" data-name="sailun" title="Sailun" data-g="brand" data-k="sailun" aria-pressed="false" hidden=""><img src="img/brands-s/sailun.webp" alt="Sailun" loading="lazy"><span class="c">0</span></button><button type="button" class="tl br zero" data-name="uniroyal" title="Uniroyal" data-g="brand" data-k="uniroyal" aria-pressed="false" hidden=""><img src="img/brands-s/uniroyal.svg" alt="Uniroyal" loading="lazy"><span class="c">0</span></button></div><button type="button" class="br-all" id="brAll">Усі бренди · 11</button></div></div></div>
+            <div class="fgc"><div class="fg-b"><label class="br-q"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6.5"></circle><path d="M16 16l4.5 4.5"></path></svg><input type="search" id="brQ" placeholder="Знайти бренд" aria-label="Знайти бренд"></label><div class="brs" id="fBrand"><button type="button" class="tl br" data-name="vredestein" title="Vredestein" data-g="brand" data-k="quatrac" aria-pressed="false"><img src="img/brands-s/vredestein.webp" alt="Vredestein" loading="lazy"><span class="c">6</span></button><button type="button" class="tl br" data-name="barum" title="Barum" data-g="brand" data-k="polaris5" aria-pressed="false"><img src="img/brands-s/barum.svg" alt="Barum" loading="lazy"><span class="c">5</span></button><button type="button" class="tl br" data-name="continental" title="Continental" data-g="brand" data-k="pc7" aria-pressed="false"><img src="img/brands-s/continental.webp" width="104" height="19" alt="Continental" loading="lazy"><span class="c">4</span></button><button type="button" class="tl br" data-name="lassa" title="Lassa" data-g="brand" data-k="revola" aria-pressed="false"><img src="img/brands-s/lassa.webp" alt="Lassa" loading="lazy"><span class="c">4</span></button><button type="button" class="tl br" data-name="toyo" title="Toyo" data-g="brand" data-k="proxes2" aria-pressed="false"><img src="img/brands-s/toyo.svg" alt="Toyo" loading="lazy"><span class="c">3</span></button><button type="button" class="tl br zero" data-name="federal" title="Federal" data-g="brand" data-k="federal" aria-pressed="false"><img src="img/brands-s/federal.webp" alt="Federal" loading="lazy"><span class="c">0</span></button><button type="button" class="tl br zero" data-name="nitto" title="Nitto" data-g="brand" data-k="nitto" aria-pressed="false" hidden=""><img src="img/brands-s/nitto.webp" alt="Nitto" loading="lazy"><span class="c">0</span></button><button type="button" class="tl br zero" data-name="orium" title="Orium" data-g="brand" data-k="orium" aria-pressed="false" hidden=""><img src="img/brands-s/orium.webp" alt="Orium" loading="lazy"><span class="c">0</span></button><button type="button" class="tl br zero" data-name="riken" title="Riken" data-g="brand" data-k="riken" aria-pressed="false" hidden=""><img src="img/brands-s/riken.webp" alt="Riken" loading="lazy"><span class="c">0</span></button><button type="button" class="tl br zero" data-name="sailun" title="Sailun" data-g="brand" data-k="sailun" aria-pressed="false" hidden=""><img src="img/brands-s/sailun.webp" alt="Sailun" loading="lazy"><span class="c">0</span></button><button type="button" class="tl br zero" data-name="uniroyal" title="Uniroyal" data-g="brand" data-k="uniroyal" aria-pressed="false" hidden=""><img src="img/brands-s/uniroyal.svg" alt="Uniroyal" loading="lazy"><span class="c">0</span></button></div><button type="button" class="br-all" id="brAll">Усі бренди · 11</button></div></div></div>
           <div class="fg" data-fg="eu"><button type="button" class="fg-h" aria-expanded="true"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><rect x="4.5" y="3.5" width="15" height="17"></rect><path d="M8 8h4M8 11.5h6.5M8 15h3.5"></path></svg><b>Євроетикетка</b><em></em><svg class="i chev" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"></path></svg></button>
             <div class="fgc"><div class="fg-b"><div id="fEu"><div class="eur"><span class="eur-l"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 21V5a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v16"></path><path d="M4 21h12"></path><path d="M8 7h4v4H8z"></path><path d="M15 9l3 3v6a1.5 1.5 0 0 0 3 0v-7l-3-3"></path></svg>Паливо</span><div class="eus" data-eu="fuel"><button type="button" class="ar f-A zero" data-v="A" aria-label="Паливо: клас A і кращі" title="немає шин">A</button><button type="button" class="ar f-B" data-v="B" aria-label="Паливо: клас B і кращі" title="4 шини">B</button><button type="button" class="ar f-C" data-v="C" aria-label="Паливо: клас C і кращі" title="17 шин">C</button><button type="button" class="ar f-D" data-v="D" aria-label="Паливо: клас D і кращі" title="17 шин">D</button><button type="button" class="ar f-E" data-v="E" aria-label="Паливо: клас E і кращі" title="22 шини">E</button></div></div><div class="eur"><span class="eur-l"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 15a4 4 0 0 1 .4-8 5 5 0 0 1 9.6 1.5A3.3 3.3 0 0 1 17 15z"></path><path d="M8 18l-1 2M12 18l-1 2M16 18l-1 2"></path></svg>Мокра</span><div class="eus" data-eu="wet"><button type="button" class="ar w-A" data-v="A" aria-label="Мокра дорога: клас A і кращі" title="7 шин">A</button><button type="button" class="ar w-B" data-v="B" aria-label="Мокра дорога: клас B і кращі" title="17 шин">B</button><button type="button" class="ar w-C" data-v="C" aria-label="Мокра дорога: клас C і кращі" title="22 шини">C</button><button type="button" class="ar w-D" data-v="D" aria-label="Мокра дорога: клас D і кращі" title="22 шини">D</button><button type="button" class="ar w-E" data-v="E" aria-label="Мокра дорога: клас E і кращі" title="22 шини">E</button></div></div><div class="eur"><span class="eur-l"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9v6h4l5 4V5L8 9z"></path><path d="M16.5 8.5a5 5 0 0 1 0 7M19 6a8.5 8.5 0 0 1 0 12"></path></svg>Шум</span><div class="eus n3" data-eu="noise"><button type="button" class="db" data-v="69" aria-label="Шум до 69 дБ" title="3 шини">≤69<small>дБ</small></button><button type="button" class="db" data-v="70" aria-label="Шум до 70 дБ" title="5 шин">≤70<small>дБ</small></button><button type="button" class="db" data-v="71" aria-label="Шум до 71 дБ" title="12 шин">≤71<small>дБ</small></button></div></div></div><p class="fg-hint">Натисніть клас — покажемо шини з ним і кращими.</p></div></div></div>
           <div class="fg" data-fg="feat"><button type="button" class="fg-h" aria-expanded="true"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v4M12 17v4M3 12h4M17 12h4M6 6l2.5 2.5M15.5 15.5 18 18M6 18l2.5-2.5M15.5 8.5 18 6"></path></svg><b>Особливості</b><em></em><svg class="i chev" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"></path></svg></button>
@@ -3304,11 +3446,14 @@ html.gate-on body{padding-right:var(--gate-sb,0px);}
   <section class="ct-blk" id="expert">
     <div class="ct-wrap">
       <div class="ct-h"><span class="num"><b>01</b> / 04</span><h2>Порада експерта</h2><span class="rule"></span><span class="draft">чернетка блока</span></div>
-      <figure class="ex">
-        <div class="ex-ava" aria-hidden="true">А</div>
-        <div><q>Цей розмір найчастіше стоїть на авто С-класу (Skoda Octavia, VW Golf). Ці машини мають досить жорстку підвіску. Для комфортної їзди нашими дорогами ми не рекомендуємо шини RunFlat. Краще обрати моделі з м'якою боковиною, але обов'язково з індексом XL (Extra Load) для захисту від гуль.</q>
-          <cite><b>Андрій</b>, головний спеціаліст з підбору</cite></div>
-      </figure>
+      <div class="xp2">
+        <div class="x-top"><img class="x-face" src="img/experts/expert3-face-252.webp" width="252" height="252" alt="Андрій" loading="lazy">
+          <div class="x-ver"><span class="x-l">Висновок · 205/55 R16</span><p>М'яка боковина з індексом XL, без RunFlat.</p></div>
+          </div>
+        <div class="x-cols"><div><span class="x-l">Коментар</span><p class="x-q">Цей розмір найчастіше стоїть на авто С-класу (Skoda Octavia, VW Golf). Ці машини мають досить жорстку підвіску. Для комфортної їзди нашими дорогами ми не рекомендуємо шини RunFlat. Краще обрати моделі з м'якою боковиною, але обов'язково з індексом XL (Extra Load) для захисту від гуль.</p></div>
+          <div><span class="x-l">На що дивитись</span><ul class="x-pm"><li class="p">Індекс XL — захист від гуль</li><li class="p">М'яка боковина — комфорт на наших дорогах</li><li class="m">RunFlat — жорстко для підвіски C-класу</li></ul></div></div>
+        <div class="x-foot"><div class="x-sig"><span class="x-l">Підпис</span><b>Андрій</b><span class="x-role">Головний спеціаліст з підбору</span><i class="x-stamp" aria-hidden="true">Шина buy<br>перевірено</i></div></div>
+      </div></div>
     </div>
   </section>
 
@@ -3739,11 +3884,11 @@ document.addEventListener('DOMContentLoaded', function () {
   try { last = JSON.parse(localStorage.getItem('hxLastSize')); } catch (e) {}
   function remember(z) { try { localStorage.setItem('hxLastSize', JSON.stringify(z)); } catch (e) {} }
   function btn(z, was) { return '<button type="button" class="hx-q" data-q="' + z.w + ',' + z.p + ',' + z.d + '">' + label(z) + (was ? '<small>минулий</small>' : '') + '</button>'; }
-  quick.innerHTML = '<button type="button" class="hx-qbtn" aria-expanded="false">Популярні розміри<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></button><div class="hx-qlist" hidden></div>';
+  if (!quick.querySelector('.hx-qbtn')) quick.innerHTML = '<button type="button" class="hx-qbtn" aria-expanded="false">Популярні розміри<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></button><div class="hx-qlist" hidden></div>';   // it comes with the page
   var qbtn = quick.querySelector('.hx-qbtn'), qlist = quick.querySelector('.hx-qlist');
   function paintQuick() {
-    var l = label(size());
-    qlist.innerHTML = (last && last.w ? btn(last, true) : '') + POP.filter(function (p) { return !last || label(p) !== label(last); }).map(function (p) { return btn(p); }).join('');
+    var l = label(size()), h = (last && last.w ? btn(last, true) : '') + POP.filter(function (p) { return !last || label(p) !== label(last); }).map(function (p) { return btn(p); }).join('');
+    if (qlist._h !== h) { qlist._h = h; qlist.innerHTML = h; }
     [].forEach.call(qlist.querySelectorAll('button'), function (b) { var q = b.dataset.q.split(','); b.classList.toggle('is-on', q[0] + '/' + q[1] + ' R' + q[2] === l); });
   }
   function openQuick(open) { qlist.hidden = !open; qbtn.setAttribute('aria-expanded', String(open)); }
@@ -4141,8 +4286,8 @@ document.addEventListener('DOMContentLoaded', function () {
   /* ---------- phone: the sheet ---------- */
   var sum = document.getElementById('hxsSum');
   function paintSum() {
-    var c = document.querySelector('#hxSeasons .hx-chip.is-active');
-    sum.innerHTML = label(size()) + '<small>' + (c ? c.textContent.trim() : '') + ' · натисніть, щоб змінити</small>';
+    var c = document.querySelector('#hxSeasons .hx-chip.is-active'), h = label(size()) + '<small>' + (c ? c.textContent.trim() : '') + ' · натисніть, щоб змінити</small>';
+    if (sum._h !== h) { sum._h = h; if (sum.innerHTML !== h) sum.innerHTML = h; }   // the line comes with the page
   }
   function sheet(open) { document.body.classList.toggle('hxs-open', open); if (open) render(true); }
   document.getElementById('hxsOpen').addEventListener('click', function () { sheet(true); });
@@ -4660,21 +4805,30 @@ document.addEventListener('DOMContentLoaded', function () {
   var ARC = 'M' + pt(A0, 54) + ' A54 54 0 1 1 ' + pt(A1, 54), TICKS = '';
   for (var t = 0; t <= 27; t++) { var th = A0 + (A1 - A0) * t / 27, big = t % 9 === 0; TICKS += '<path d="M' + pt(th, big ? 61 : 63) + ' L' + pt(th, 67) + '" class="' + (big ? 'tk big' : 'tk') + '"/>'; }
   function dialHtml(id, lbl) {
-    return '<svg viewBox="0 0 140 140" aria-hidden="true"><defs><linearGradient id="g' + id + '" x1="0" y1="1" x2="1" y2="1">' +
-      '<stop offset="0" stop-color="#1a9641"/><stop offset=".55" stop-color="#ccf042"/><stop offset="1" stop-color="#f39200"/></linearGradient></defs>' + TICKS +
-      '<path class="d-track" d="' + ARC + '" pathLength="1"/><path class="d-arc" d="' + ARC + '" pathLength="1" stroke="url(#g' + id + ')"/>' +
-      '<g class="d-knob"><circle cx="70" cy="70" r="41"/><circle class="d-ring" cx="70" cy="70" r="35"/><rect class="d-ptr" x="67.5" y="31" width="5" height="15"/></g></svg>' +
+    // the knob of a car: the scale, the grey LEDs and over them the coloured ones with one glow, a light hollow in the panel —
+    // drawn; the bezel, the grip with its pointer, the light, the cap — layers (styles «the knobs as in a car»)
+    var tk = '', leds = '', on = '';
+    for (var t = 0; t <= 27; t++) { var th = A0 + (A1 - A0) * t / 27, big = t % 9 === 0; tk += '<path d="M' + pt(th, big ? 63 : 64.5) + ' L' + pt(th, 68) + '" class="' + (big ? 'tk big' : 'tk') + '"/>'; }
+    for (var n = 0; n < 25; n++) { var a = A0 + (A1 - A0) * n / 24, d = 'M' + pt(a, 54) + ' L' + pt(a, 59.5); leds += '<path class="led" d="' + d + '"/>'; on += '<path class="led-on" d="' + d + '" stroke="' + ledColour(n / 24) + '"/>'; }
+    return '<svg viewBox="0 0 140 140" aria-hidden="true"><defs><filter id="lg' + id + '" color-interpolation-filters="sRGB"><feGaussianBlur stdDeviation="1.15" result="g"/><feMerge><feMergeNode in="g"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs>' +
+      tk + '<g class="leds">' + leds + '</g><g class="leds-on" filter="url(#lg' + id + ')">' + on + '</g><circle class="hole" cx="70" cy="70" r="51"/></svg>' +
+      '<span class="kb" aria-hidden="true"><span class="kb-bezel"></span><span class="kb-grip"><i class="kb-ptr"></i></span><span class="kb-shine"></span><span class="kb-cap"></span></span>' +
       '<div class="d-val"><small>' + lbl + '</small><b></b><i>₴/шт</i></div>';
   }
   var dials = { a: $('dA'), b: $('dB') };
   fill('dA', function () { return dialHtml('A', 'від'); }); fill('dB', function () { return dialHtml('B', 'до'); });
   function cur(k) { return k === 'a' ? (S.pmin == null ? LO : Math.max(LO, S.pmin)) : (S.pmax == null ? HI : Math.min(HI, S.pmax)); }
   function setStyle(el, n, v) { if (el['_' + n] !== v) { el.style[n] = v; el['_' + n] = v; } }
+  // green → acid → orange along the scale
+  function mixC(c1, c2, t) { return c1.map(function (v, i) { return Math.round(v + (c2[i] - v) * t); }); }
+  function ledColour(t) { var g = [26, 150, 65], a = [204, 240, 66], o = [243, 146, 0], c = t < .55 ? mixC(g, a, t / .55) : mixC(a, o, (t - .55) / .45); return 'rgb(' + c.join(',') + ')'; }
   function paintDials() {
     ['a', 'b'].forEach(function (k) {
       var v = cur(k), f = (v - LO) / (HI - LO), d = dials[k];
-      setStyle(d.querySelector('.d-knob'), 'transform', 'rotate(' + (A0 + f * (A1 - A0)).toFixed(1) + 'deg)');
-      setStyle(d.querySelector('.d-arc'), 'strokeDasharray', Math.max(0.001, f).toFixed(4) + ' 1');
+      setStyle(d.querySelector('.kb-grip'), 'transform', 'rotate(' + (A0 + f * (A1 - A0)).toFixed(1) + 'deg)');
+      // the LEDs light up to the value, each in the colour of its place on the scale
+      var leds = d._leds || (d._leds = d.querySelectorAll('.led-on'));
+      [].forEach.call(leds, function (l, n) { var on = n / (leds.length - 1) <= f + 1e-6; if (l._on !== on) { l._on = on; l.classList.toggle('lit', on); } });
       setText(d.querySelector('b'), fmt(v));
       setAttr(d, 'aria-valuemin', LO); setAttr(d, 'aria-valuemax', HI); setAttr(d, 'aria-valuenow', v); setAttr(d, 'aria-valuetext', fmt(v) + ' гривень');
     });
@@ -5030,6 +5184,20 @@ document.addEventListener('DOMContentLoaded', function () {
   }
   function later() { (window.requestIdleCallback || function (f) { setTimeout(f, 200); })(make, { timeout: 3000 }); }
   if (document.readyState === 'complete') later(); else addEventListener('load', later);
+})();
+</script>
+<script>
+/* the hand of the pen (Caveat, 150 KB) is used only far below, in «Порада експерта»: its file is fetched once the page is
+   scrolled to about two screens above the block, so the block shows the right hand when it is reached, and a visitor who
+   never goes down there does not load it (nothing waits for it before the first paint either) */
+(function () {
+  var x = document.getElementById('expert');
+  if (!x || !('IntersectionObserver' in window) || !document.fonts || !document.fonts.load) return;
+  var io = new IntersectionObserver(function (es) {
+    if (!es[0].isIntersecting) return;
+    io.disconnect(); document.fonts.load('500 20px Caveat', 'АаAa').catch(function () {});
+  }, { rootMargin: '0px 0px 1600px 0px' });
+  io.observe(x);
 })();
 </script>
 </body>

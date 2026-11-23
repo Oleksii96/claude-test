@@ -3132,14 +3132,14 @@ html.gate-on body{padding-right:var(--gate-sb,0px);}
 
   <nav class="mobile-drawer">
     <div class="flex-between" style="margin-bottom:20px;">
-      <a href="index.html" class="logo"><img decoding="async" class="mark" src="opt/hero/img/favicon-tire.png" alt="Шина buy">
+      <a href="./" class="logo"><img decoding="async" class="mark" src="opt/hero/img/favicon-tire.png" alt="Шина buy">
         <div><b>Шина buy</b></div>
       </a>
       <button class="btn-icon drawer-close" aria-label="Закрити"><svg class="icon">
           <use href="#icon-close"></use>
         </svg></button>
     </div>
-    <div class="drawer-item"><a href="index.html">Головна</a></div>
+    <div class="drawer-item"><a href="./">Головна</a></div>
     <div class="drawer-item"><a href="#">Каталог шин <svg class="icon">
           <use href="#icon-chevron-down"></use>
         </svg></a>
@@ -3183,7 +3183,7 @@ html.gate-on body{padding-right:var(--gate-sb,0px);}
             <use href="#icon-menu"></use>
           </svg></button>
 
-        <a href="index.html" class="logo">
+        <a href="./" class="logo">
           <img decoding="async" class="mark" src="opt/hero/img/favicon-tire.png" alt="Шина buy">
           <div><b>Шина buy</b><span
               style="display:block;font-size:.62rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);font-weight:700;margin-top:1px;">магазин
@@ -3191,7 +3191,7 @@ html.gate-on body{padding-right:var(--gate-sb,0px);}
         </a>
 
         <ul class="main-nav">
-          <li><a href="index.html">Головна</a></li>
+          <li><a href="./">Головна</a></li>
           <li>
             <a href="../catalog/">Каталог шин <svg class="icon">
                 <use href="#icon-chevron-down"></use>
@@ -3971,10 +3971,11 @@ html.gate-on body{padding-right:var(--gate-sb,0px);}
 var __gateOpen, __gateOpened = new Promise(function (r) { __gateOpen = r; });
 window.__bk={open:__gateOpened,warm:true,hero:document.querySelector('.bk-hero'),people:document.querySelector('.bk-people'),marking:document.querySelector('.bk-marking'),cat:document.querySelector('.bk-cat'),seo:document.querySelector('.bk-seo'),footer:document.querySelector('.bk-footer')};
 (function () {
-  var HASH = '4ccb6e94';
+  var HASH = '4ccb6e94', mem = ''; try { mem = localStorage.getItem('shina-gate'); } catch (e) {}
   var gate = document.getElementById('gate'), form = document.getElementById('gateForm'), pass = document.getElementById('gatePass'), err = document.getElementById('gateErr');
   var bar = document.getElementById('gateBar'), load = document.getElementById('gateLoad');
   var blocks = [].slice.call(document.querySelectorAll('body > [class^="bk-"]')), ready = false, allowed = false, done = false;
+  if (mem === HASH) { allowed = true; form.hidden = true; }
   function fnv(t) { var h = 0x811c9dc5, b = unescape(encodeURIComponent(t)); for (var i = 0; i < b.length; i++) { h ^= b.charCodeAt(i); h = Math.imul(h, 0x01000193) >>> 0; } return ('0000000' + h.toString(16)).slice(-8); }
   addEventListener('pageshow', function (e) { if (e.persisted) location.reload(); });
   blocks.forEach(function (b) { b.inert = true; });
@@ -3996,7 +3997,7 @@ window.__bk={open:__gateOpened,warm:true,hero:document.querySelector('.bk-hero')
       gate.classList.remove('is-bad'); void gate.offsetWidth; gate.classList.add('is-bad');
       pass.select(); return;
     }
-    allowed = true; err.textContent = '';
+    try { localStorage.setItem('shina-gate', HASH); } catch (e) {} allowed = true; err.textContent = '';
     if (!ready) { form.hidden = true; }
     tryOpen();
   });
@@ -4213,7 +4214,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   __bk.hero.querySelectorAll('#reelSearchBtn').forEach(function (btn) {
     btn.addEventListener('click', function () {
-      window.location.href = 'catalog.html?' + (btn.dataset.query || '');
+      window.location.href = '../catalog/?' + (btn.dataset.query || '');
     });
   });
 
@@ -4272,7 +4273,7 @@ document.addEventListener('DOMContentLoaded', function () {
     if (carSearchBtn) {
       carSearchBtn.addEventListener('click', function () {
         var brand = matchedBrand ? matchedBrand.name : carBrandInput.value.trim();
-        window.location.href = 'catalog.html?brand=' + encodeURIComponent(brand) + '&model=' + encodeURIComponent(modelSelect.value);
+        window.location.href = '../catalog/?brand=' + encodeURIComponent(brand) + '&model=' + encodeURIComponent(modelSelect.value);
       });
     }
   }
@@ -4395,35 +4396,35 @@ document.addEventListener('DOMContentLoaded', function () {
           disc: '<small>доставка</small><b class="big">0&nbsp;₴</b><small>безкоштовно</small>',
           title: 'Безкоштовна доставка', sub: 'до відділення Нової пошти · 10 брендів · від 2 шт',
           m1v: '10', m1l: 'брендів', m2v: 'від 2 шт', m2l: 'у замовленні',
-          cta: 'Обрати шини', href: 'catalog.html?free=1'
+          cta: 'Обрати шини', href: '../catalog/?free=1'
         },
         {
           word: 'Розстрочка', color: '#2f6fed', icon: 'card',
           disc: '<svg class="icon"><use href="#icon-card"></use></svg><small>оплата</small><small>частинами</small>',
           title: 'Шини в розстрочку', sub: 'ПриватБанк, Sense Bank, Нова пошта',
           m1v: 'ПриватБанк', m1l: 'партнер', m2v: 'Sense Bank', m2l: 'партнер',
-          cta: 'Умови розстрочки', href: 'catalog.html'
+          cta: 'Умови розстрочки', href: '../catalog/'
         },
         {
           word: 'Гарантія', color: '#1f9d5a', icon: 'shield',
           disc: '<svg class="icon"><use href="#icon-shield"></use></svg><small>гарантія</small><small>виробника</small>',
           title: 'Гарантія та повернення', sub: 'Гарантія виробника · обмін або повернення протягом 14 днів',
           m1v: '14 днів', m1l: 'повернення', m2v: 'виробника', m2l: 'гарантія',
-          cta: 'Умови гарантії', href: 'catalog.html'
+          cta: 'Умови гарантії', href: '../catalog/'
         },
         {
           word: 'Опт', color: '#132a4d', icon: 'badge-check',
           disc: '<svg class="icon"><use href="#icon-badge-check"></use></svg><small>для юросіб</small><small>та гуртом</small>',
           title: 'Працюємо з юрособами', sub: 'ПДВ, гуртові поставки, участь у тендерах',
           m1v: 'з ПДВ', m1l: 'юрособам', m2v: 'Тендери', m2l: 'участь',
-          cta: 'Дізнатись більше', href: 'catalog.html'
+          cta: 'Дізнатись більше', href: '../catalog/'
         },
         {
           word: 'Sailun', color: '#1b4fa0', icon: 'cycle',
           disc: '<small>від</small><b>1 990&nbsp;₴</b><small>за шину</small>',
           title: 'Sailun Atrezzo 4Seasons Ultra', sub: 'Всесезонна шина 225/40 R18, рейтинг ★ 4.6 (37 відгуків)',
           m1v: 'від 1 990 ₴', m1l: 'за шину', m2v: '4.6 ★', m2l: '37 відгуків',
-          cta: 'Детальніше', href: '../product.html'
+          cta: 'Детальніше', href: '../product/'
         }
       ];
       var ROT = [128, 8, 248, 68, 188];   // початковий кут кожного слайду — для візуального різноманіття
